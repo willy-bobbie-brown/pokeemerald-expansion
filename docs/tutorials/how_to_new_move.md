@@ -18,7 +18,7 @@ This guide is here to give you a breakdown of how moves work, how to edit existi
 3. [Adding a new move](#adding-a-new-move)
 
 ## Key files and definitions
-Before beginning the process, it's important to familiarise yourself with the important files that control moves. There are three categories of files - header(.h) files, which contain static information about a move, .c files which contains functions in C that determine how the move behaves, and script files (.s or .inc) that actually "run" the move - i.e. determine the sequence of events you see on screen when you execute the move.
+Before beginning the process, it's important to familiarise yourself with the important files that control moves. There are three categories of files - header(.h) files, which contain static information about a move, .c files which contains functions in C that determine how the move behaves, and script files (.s or .inc) that actually "run" the move - i.e. determine the sequence of events you see on screen when you execute the move. Ok
 
 ## Header files
 ### src/data/moves_info.h
