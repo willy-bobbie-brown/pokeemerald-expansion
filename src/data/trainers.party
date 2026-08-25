@@ -9670,21 +9670,17 @@ Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_MAY_ROUTE_103_MUDKIP ===
-Name: Anabel
-Class: Salon Maiden
-Pic: Salon Maiden Anabel
+Name: MAY
+Class: Rival
+Pic: May
 Gender: Female
-Music: Music
+Music: Female
 Double Battle: No
-AI: Smart Trainer / Prediction
+AI: Basic Trainer
 
-Raikou @ Lum Berry
-Level: 50
-Modest Nature
-- Thunderbolt
-- Calm Mind
-- Rest
-- Reflect
+Treecko
+Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MAY_ROUTE_110_MUDKIP ===
 Name: MAY
