@@ -287,7 +287,7 @@ Route103_EventScript_Isabelle::
 	end
 
 Route103_Text_MayRoute103Pokemon:
-	.string "Let's see… The POKéMON found\n"
+	.string "MAY: Let's see… The POKéMON found\n"
 	.string "on ROUTE 103 include…$"
 
 Route103_Text_MayLetsBattle:
