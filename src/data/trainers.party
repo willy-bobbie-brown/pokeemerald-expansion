@@ -4791,38 +4791,42 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Crunch
 
 === TRAINER_ROXANNE_1 ===
-Name: ROXANNE
-Class: Leader
-Pic: Leader Roxanne
+Name: LUCY
+Class: Pike Queen
+Pic: Pike Queen Lucy
 Gender: Female
-Music: Female
+Music: Male
 Items: Potion / Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer / Prediction
 
-Geodude
+Onix
+Ability: Sturdy
 Level: 12
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Defense Curl
+Adamant Nature
+- Sandstorm
+- Stealth Rock
 - Rock Throw
-- Rock Tomb
+- Dragon Breath
 
-Geodude
+Shuckle @ Chesto Berry
+Ability: Contrary
 Level: 12
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Defense Curl
-- Rock Throw
-- Rock Tomb
+Bold Nature
+- Toxic
+- Rest
+- Bug Bite
+- Power Trick
 
-Nosepass @ Oran Berry
+Seviper @ Oran Berry
+Ability: Shed Skin
 Level: 15
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Block
-- Harden
-- Tackle
-- Rock Tomb
+Adamant Nature
+- Poison Fang
+- Glare
+- Bite
+- Swagger
+
 
 === TRAINER_BRAWLY_1 ===
 Name: BRAWLY
