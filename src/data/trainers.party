@@ -4911,46 +4911,50 @@ Jolly Nature
 - Close Combat
 
 === TRAINER_FLANNERY_1 ===
-Name: FLANNERY
-Class: Leader
-Pic: Leader Flannery
-Gender: Female
-Music: Female
+Name: TUCKER
+Class: Dome Ace
+Pic: Dome Ace Tucker
+Gender: Male
+Music: Male
 Items: Hyper Potion / Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer / Prediction / Powerful Status
 
-Numel
+Arcanine @ Heat Rock
+Ability: Intimidate
 Level: 24
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Overheat
-- Take Down
-- Magnitude
+Jolly Nature
+- Flare Blitz
+- Extreme Speed
+- Bulldoze
 - Sunny Day
 
-Slugma
+Charizard @ White Herb
+Ability: Solar Power
 Level: 24
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Modest Nature
 - Overheat
-- Smog
-- Light Screen
-- Sunny Day
+- Dragon Breath
+- Air Slash
+- Solar Beam
 
-Camerupt
+Swampert @ Rindo Berry
+Ability: Torrent
 Level: 26
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Overheat
-- Tackle
-- Sunny Day
-- Attract
+Adamant Nature
+- Earthquake
+- Liquidation
+- Ice Punch
+- Mirror Coat
 
-Torkoal @ White Herb
+Salamence @ Lum Berry
+Ability: Intimidate
 Level: 29
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Overheat
-- Sunny Day
-- Body Slam
-- Attract
+Jolly Nature
+- Flamethrower
+- Dragon Breath
+- Air Slash
+- Scale Shot
 
 === TRAINER_NORMAN_1 ===
 Name: NORMAN
