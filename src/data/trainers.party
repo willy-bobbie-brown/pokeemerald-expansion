@@ -5133,54 +5133,68 @@ Modest Nature
 
 
 === TRAINER_JUAN_1 ===
-Name: JUAN
-Class: Leader
-Pic: Leader Juan
+Name: SCOTT
+Class: Palace Maven
+Pic: Palace Maven Spenser
 Gender: Male
 Music: Male
 Items: Hyper Potion / Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer / Prediction
 
-Luvdisc
-Level: 41
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Water Pulse
-- Attract
-- Sweet Kiss
-- Flail
+Starmie @ Choice Specs
+Ability: Analytic
+Level: 43
+Timid Nature
+- Thunderbolt
+- Surf
+- Power Gem
+- Ice Beam
 
-Whiscash
-Level: 41
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Rain Dance
-- Water Pulse
-- Amnesia
+Metagross @ Choice Band
+Ability: Clear Body
+Level: 43
+Jolly Nature
+- Iron Head
+- Hammer Arm
+- Zen Headbutt
 - Earthquake
 
-Sealeo
-Level: 43
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Encore
-- Body Slam
-- Aurora Beam
-- Water Pulse
+Swampert @ Assault Vest
+Ability: Torrent
+Level: 44
+Adamant Nature
+- Earthquake
+- Liquidation
+- Ice Punch
+- Rock Slide
 
-Crawdaunt
-Level: 43
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Water Pulse
-- Crabhammer
-- Taunt
-- Leer
+Latios @ Life Orb
+Ability: Levitate
+Level: 44
+Modest Nature
+- Luster Purge
+- Recover
+- Aura Sphere
+- Dragon Pulse
 
-Kingdra @ Chesto Berry
+Salamence @ Lum Berry
+Ability: Intimidate
+Level: 45
+Jolly Nature
+- Dragon Dance
+- Dragon Claw
+- Dual Wingbeat
+- Iron Head
+
+Suicune @ Leftovers
+Ability: Inner Focus
 Level: 46
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Water Pulse
-- Double Team
+Bold Nature
+- Calm Mind
+- Surf
 - Ice Beam
-- Rest
+- Sheer Cold
 
 === TRAINER_JERRY_1 ===
 Name: JERRY
