@@ -4957,46 +4957,51 @@ Jolly Nature
 - Scale Shot
 
 === TRAINER_NORMAN_1 ===
-Name: NORMAN
-Class: Leader
-Pic: Leader Norman
+Name: SPENSER
+Class: Palace Maven
+Pic: Palace Maven Spenser
 Gender: Male
 Music: Male
 Items: Hyper Potion / Hyper Potion
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer / Prediction
 
-Spinda
+Venusaur @ Sitrus Berry
+Ability: Overgrow
 Level: 27
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Teeter Dance
-- Psybeam
-- Facade
-- Encore
+Timid Nature
+- Sleep Powder
+- Sludge Bomb
+- Giga Drain
+- Synthesis
 
-Vigoroth
+Chansey @ Eviolite
+Ability: Serene Grace
 Level: 27
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Slash
-- Facade
-- Encore
-- Feint Attack
+Calm Nature
+- Toxic
+- Healing Wish
+- Dazzling Gleam
+- Light Screen
 
-Linoone
+Lapras @ Leftovers
+Ability: Shell Armor
 Level: 29
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Slash
-- Belly Drum
-- Facade
-- Headbutt
+Bold Nature
+- Freeze-Dry
+- Ice Beam
+- Surf
+- Reflect
 
 Slaking @ Sitrus Berry
+Ability: Truant
 Level: 31
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Counter
+Jolly Nature
+- Giga Impact
+- Earthquake
 - Yawn
-- Facade
-- Feint Attack
+- Aerial Ace
+
 
 === TRAINER_WINONA_1 ===
 Name: WINONA
