@@ -4852,7 +4852,7 @@ Level: 18
 Jolly Nature
 - Rock Blast
 - Aerial Ace
-- Bug Bite
+- Fury Cutter
 - Counter
 
 Breloom @ Focus Sash
@@ -4950,7 +4950,7 @@ Adamant Nature
 Salamence @ Lum Berry
 Ability: Intimidate
 Level: 29
-Jolly Nature
+Modest Nature
 - Flamethrower
 - Dragon Breath
 - Air Slash
@@ -4966,14 +4966,14 @@ Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Smart Trainer / Prediction
 
-Venusaur @ Sitrus Berry
-Ability: Overgrow
+Venusaur @ Focus Sash
+Ability: Chlorophyll
 Level: 27
 Timid Nature
 - Sleep Powder
 - Sludge Bomb
 - Giga Drain
-- Synthesis
+- Earth Power
 
 Chansey @ Eviolite
 Ability: Serene Grace
@@ -4982,16 +4982,16 @@ Calm Nature
 - Toxic
 - Healing Wish
 - Dazzling Gleam
-- Light Screen
+- Reflect
 
-Lapras @ Leftovers
-Ability: Shell Armor
+Suicune @ Chesto Berry
+Ability: Inner Focus
 Level: 29
 Bold Nature
-- Freeze-Dry
+- Scald
+- Calm Mind
 - Ice Beam
-- Surf
-- Reflect
+- Rest
 
 Slaking @ Sitrus Berry
 Ability: Truant
@@ -5055,7 +5055,7 @@ Level: 33
 Timid Nature
 - Tailwind
 - Roost
-- Thunderbolt
+- Shock Wave
 - Ancient Power
 
 Moltres @ White Herb
@@ -5073,7 +5073,7 @@ Class: Salon Maiden
 Pic: Salon Maiden Anabel
 Gender: Female
 Music: Male
-Items: Hyper Potion / Hyper Potion / Hyper Potion / Hyper Potion
+Items: Hyper Potion / Hyper Potion
 Double Battle: Yes
 AI: Smart Trainer / Prediction / Powerful Status / Double Ace Pokemon
 
@@ -5194,7 +5194,7 @@ Bold Nature
 - Calm Mind
 - Surf
 - Ice Beam
-- Sheer Cold
+- Substitute
 
 === TRAINER_JERRY_1 ===
 Name: JERRY
