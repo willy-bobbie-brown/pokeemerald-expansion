@@ -554,8 +554,23 @@ SlateportCity_EventScript_PowerTMClerk::
 
 	.align 2
 SlateportCity_Pokemart_PowerTMs:
-	.2byte ITEM_TM_HIDDEN_POWER
-	.2byte ITEM_TM_SECRET_POWER
+	.2byte ITEM_FLAME_PLATE
+	.2byte ITEM_SPLASH_PLATE
+	.2byte ITEM_ZAP_PLATE
+	.2byte ITEM_MEADOW_PLATE
+	.2byte ITEM_ICICLE_PLATE
+	.2byte ITEM_FIST_PLATE
+	.2byte ITEM_TOXIC_PLATE
+	.2byte ITEM_EARTH_PLATE
+	.2byte ITEM_SKY_PLATE
+	.2byte ITEM_MIND_PLATE
+	.2byte ITEM_INSECT_PLATE
+	.2byte ITEM_STONE_PLATE
+	.2byte ITEM_SPOOKY_PLATE
+	.2byte ITEM_DRACO_PLATE
+	.2byte ITEM_DREAD_PLATE
+	.2byte ITEM_IRON_PLATE
+	.2byte ITEM_PIXIE_PLATE
 	pokemartlistend
 
 @ Scene with Capt Sterns interview and Team Aqua announcing plans to steal Submarine
