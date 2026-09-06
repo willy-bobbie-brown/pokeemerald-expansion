@@ -13,10 +13,21 @@ LavaridgeTown_HerbShop_EventScript_Clerk::
 
 	.align 2
 LavaridgeTown_HerbShop_Pokemart:
-	.2byte ITEM_ENERGY_POWDER
-	.2byte ITEM_ENERGY_ROOT
-	.2byte ITEM_HEAL_POWDER
-	.2byte ITEM_REVIVAL_HERB
+	.2byte ITEM_ABILITY_CAPSULE
+	.2byte ITEM_ABILITY_PATCH
+	.2byte ITEM_ADAMANT_MINT
+	.2byte ITEM_MODEST_MINT
+	.2byte ITEM_JOLLY_MINT
+	.2byte ITEM_TIMID_MINT
+	.2byte ITEM_BOLD_MINT
+	.2byte ITEM_IMPISH_MINT
+	.2byte ITEM_CALM_MINT
+	.2byte ITEM_CAREFUL_MINT
+	.2byte ITEM_BRAVE_MINT
+	.2byte ITEM_RELAXED_MINT
+	.2byte ITEM_QUIET_MINT
+	.2byte ITEM_SASSY_MINT
+	.2byte ITEM_SERIOUS_MINT
 	pokemartlistend
 
 LavaridgeTown_HerbShop_EventScript_ExpertM::
