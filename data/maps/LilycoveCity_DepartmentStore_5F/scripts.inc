@@ -20,25 +20,30 @@ LilycoveCity_DepartmentStore_5F_EventScript_ClerkFarLeft::
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
-	pokemartdecoration2 LilycoveCity_DepartmentStore_5F_Pokemart_Dolls
+	pokemart LilycoveCity_DepartmentStore_5F_Pokemart_Dolls
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
 LilycoveCity_DepartmentStore_5F_Pokemart_Dolls:
-	.2byte DECOR_PICHU_DOLL
-	.2byte DECOR_PIKACHU_DOLL
-	.2byte DECOR_MARILL_DOLL
-	.2byte DECOR_JIGGLYPUFF_DOLL
-	.2byte DECOR_DUSKULL_DOLL
-	.2byte DECOR_WYNAUT_DOLL
-	.2byte DECOR_BALTOY_DOLL
-	.2byte DECOR_KECLEON_DOLL
-	.2byte DECOR_AZURILL_DOLL
-	.2byte DECOR_SKITTY_DOLL
-	.2byte DECOR_SWABLU_DOLL
-	.2byte DECOR_GULPIN_DOLL
+	.2byte ITEM_ABILITY_SHIELD
+	.2byte ITEM_AIR_BALLOON
+	.2byte ITEM_ASSAULT_VEST
+	.2byte ITEM_BLACK_SLUDGE
+	.2byte ITEM_CLEAR_AMULET
+	.2byte ITEM_COVERT_CLOAK
+	.2byte ITEM_EJECT_BUTTON
+	.2byte ITEM_EVIOLITE
+	.2byte ITEM_FOCUS_SASH
+	.2byte ITEM_HEAVY_DUTY_BOOTS
+	.2byte ITEM_LEFTOVERS
+	.2byte ITEM_MENTAL_HERB
+	.2byte ITEM_MIRROR_HERB
+	.2byte ITEM_ROCKY_HELMET
+	.2byte ITEM_SAFETY_GOGGLES
+	.2byte ITEM_UTILITY_UMBRELLA
+	.2byte ITEM_WHITE_HERB
 	pokemartlistend
 
 LilycoveCity_DepartmentStore_5F_EventScript_ClerkMidLeft::
@@ -46,22 +51,39 @@ LilycoveCity_DepartmentStore_5F_EventScript_ClerkMidLeft::
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
-	pokemartdecoration2 LilycoveCity_DepartmentStore_5F_Pokemart_Cushions
+	pokemart LilycoveCity_DepartmentStore_5F_Pokemart_Cushions
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
 LilycoveCity_DepartmentStore_5F_Pokemart_Cushions:
-	.2byte DECOR_PIKA_CUSHION
-	.2byte DECOR_ROUND_CUSHION
-	.2byte DECOR_ZIGZAG_CUSHION
-	.2byte DECOR_SPIN_CUSHION
-	.2byte DECOR_DIAMOND_CUSHION
-	.2byte DECOR_BALL_CUSHION
-	.2byte DECOR_GRASS_CUSHION
-	.2byte DECOR_FIRE_CUSHION
-	.2byte DECOR_WATER_CUSHION
+	.2byte ITEM_BLUNDER_POLICY
+	.2byte ITEM_CHOICE_BAND
+	.2byte ITEM_CHOICE_SCARF
+	.2byte ITEM_CHOICE_SPECS
+	.2byte ITEM_DAMP_ROCK
+	.2byte ITEM_ELECTRIC_SEED
+	.2byte ITEM_EXPERT_BELT
+	.2byte ITEM_FLAME_ORB
+	.2byte ITEM_GRASSY_SEED
+	.2byte ITEM_HEAT_ROCK
+	.2byte ITEM_ICY_ROCK
+	.2byte ITEM_IRON_BALL
+	.2byte ITEM_LIFE_ORB
+	.2byte ITEM_LOADED_DICE
+	.2byte ITEM_LUMINOUS_MOSS
+	.2byte ITEM_MISTY_SEED
+	.2byte ITEM_NORMAL_GEM
+	.2byte ITEM_PSYCHIC_SEED
+	.2byte ITEM_PUNCHING_GLOVE
+	.2byte ITEM_ROOM_SERVICE
+	.2byte ITEM_SMOOTH_ROCK
+	.2byte ITEM_TERRAIN_EXTENDER
+	.2byte ITEM_THROAT_SPRAY
+	.2byte ITEM_TOXIC_ORB
+	.2byte ITEM_WEAKNESS_POLICY
+	.2byte ITEM_WIDE_LENS
 	pokemartlistend
 
 LilycoveCity_DepartmentStore_5F_EventScript_ClerkMidRight::
