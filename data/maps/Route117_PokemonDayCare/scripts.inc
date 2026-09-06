@@ -97,8 +97,9 @@ Route117_PokemonDayCare_MoveDeleter_Text_MonHasForgottenMove:
 	.string "{STR_VAR_2} completely.$"
 
 Route117_PokemonDayCare_MoveDeleter_Text_ComeAgain:
-	.string "Come again if there are moves that\n"
-	.string "need to be forgotten.$"
+	.string "Hey do me a favor will you?\p"
+	.string "Don't tell old man outside\n"
+	.string "that I'm in here.$"
 
 Route117_PokemonDayCare_MoveDeleter_Text_EggCantForgetMoves:
 	.string "What?\n"
