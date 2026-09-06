@@ -355,8 +355,10 @@ EventScript_EndDive::
 
 EventScript_UseDiveUnderwater::
 	lockall
-	checkfieldmove FIELD_MOVE_DIVE
-	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantSurface
+	checkitem ITEM_HM08
+	goto_if_eq VAR_RESULT, FALSE, EventScript_CantSurface
+	goto_if_unset FLAG_BADGE07_GET, EventScript_CantDive
+	setvar VAR_RESULT, 0
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
 	setfieldeffectargument 0, VAR_RESULT
 	setfieldeffectargument 1, 1
