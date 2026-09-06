@@ -21,27 +21,27 @@ LilycoveCity_DepartmentStoreRooftop_EventScript_SaleWoman::
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
-	pokemartdecoration LilycoveCity_DepartmentStoreRooftop_PokemartDecor_ClearOutSale
+	pokemart LilycoveCity_DepartmentStoreRooftop_PokemartDecor_ClearOutSale
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
 LilycoveCity_DepartmentStoreRooftop_PokemartDecor_ClearOutSale:
-	.2byte DECOR_MUD_BALL
-	.2byte DECOR_FENCE_LENGTH
-	.2byte DECOR_FENCE_WIDTH
-	.2byte DECOR_TIRE
-	.2byte DECOR_BREAKABLE_DOOR
-	.2byte DECOR_SOLID_BOARD
-	.2byte DECOR_SAND_ORNAMENT
-	.2byte DECOR_STAND
-	.2byte DECOR_SLIDE
-	.2byte DECOR_TV
-	.2byte DECOR_ROUND_TV
-	.2byte DECOR_CUTE_TV
-	.2byte DECOR_WAILMER_DOLL
-	.2byte DECOR_RHYDON_DOLL
+	.2byte ITEM_LINKING_CORD
+	.2byte ITEM_METAL_COAT
+	.2byte ITEM_KINGS_ROCK
+	.2byte ITEM_DRAGON_SCALE
+	.2byte ITEM_UPGRADE
+	.2byte ITEM_PRISM_SCALE
+	.2byte ITEM_DEEP_SEA_TOOTH
+	.2byte ITEM_DEEP_SEA_SCALE
+	.2byte ITEM_FIRE_STONE
+	.2byte ITEM_WATER_STONE
+	.2byte ITEM_THUNDER_STONE
+	.2byte ITEM_LEAF_STONE
+	.2byte ITEM_MOON_STONE
+	.2byte ITEM_SUN_STONE
 	.2byte 0
 	release
 	end
