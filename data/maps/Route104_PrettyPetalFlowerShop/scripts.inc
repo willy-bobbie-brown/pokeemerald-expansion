@@ -44,19 +44,21 @@ Route104_PrettyPetalFlowerShop_EventScript_DontExplainBerries::
 Route104_PrettyPetalFlowerShop_EventScript_SellDecorations::
 	message gText_PlayerWhatCanIDoForYou
 	waitmessage
-	pokemartdecoration2 Route104_PrettyPetalFlowerShop_Pokemart_Plants
+	pokemart Route104_PrettyPetalFlowerShop_Pokemart_Plants
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
 Route104_PrettyPetalFlowerShop_Pokemart_Plants:
-	.2byte DECOR_RED_PLANT
-	.2byte DECOR_TROPICAL_PLANT
-	.2byte DECOR_PRETTY_FLOWERS
-	.2byte DECOR_COLORFUL_PLANT
-	.2byte DECOR_BIG_PLANT
-	.2byte DECOR_GORGEOUS_PLANT
+	.2byte ITEM_CHERI_BERRY
+	.2byte ITEM_CHESTO_BERRY
+	.2byte ITEM_PECHA_BERRY
+	.2byte ITEM_RAWST_BERRY
+	.2byte ITEM_ASPEAR_BERRY
+	.2byte ITEM_PERSIM_BERRY
+	.2byte ITEM_LEPPA_BERRY
+	.2byte ITEM_ORAN_BERRY
 	pokemartlistend
 
 Route104_PrettyPetalFlowerShop_EventScript_WailmerPailGirl::
