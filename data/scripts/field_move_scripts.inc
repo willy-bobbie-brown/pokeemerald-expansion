@@ -326,8 +326,10 @@ Text_MonUsedWaterfall:
 
 EventScript_UseDive::
 	lockall
-	checkfieldmove FIELD_MOVE_DIVE
-	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantDive
+	checkitem ITEM_HM08
+	goto_if_eq VAR_RESULT, FALSE, EventScript_CantDive
+	goto_if_unset FLAG_BADGE07_GET, EventScript_CantDive
+	setvar VAR_RESULT, 0
 	copyvar 0x8004 VAR_RESULT
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
 	setfieldeffectargument 0, VAR_RESULT
