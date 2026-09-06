@@ -479,16 +479,33 @@ SlateportCity_EventScript_DollClerk::
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
-	pokemartdecoration SlateportCity_PokemartDecor_Dolls
+	pokemart SlateportCity_PokemartDecor_Dolls
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
 SlateportCity_PokemartDecor_Dolls:
-	.2byte DECOR_AZURILL_DOLL
-	.2byte DECOR_MARILL_DOLL
-	.2byte DECOR_SKITTY_DOLL
+	.2byte ITEM_LUM_BERRY
+	.2byte ITEM_SITRUS_BERRY
+	.2byte ITEM_CHILAN_BERRY
+	.2byte ITEM_OCCA_BERRY
+	.2byte ITEM_PASSHO_BERRY
+	.2byte ITEM_WACAN_BERRY
+	.2byte ITEM_RINDO_BERRY
+	.2byte ITEM_YACHE_BERRY
+	.2byte ITEM_CHOPLE_BERRY
+	.2byte ITEM_KEBIA_BERRY
+	.2byte ITEM_SHUCA_BERRY
+	.2byte ITEM_COBA_BERRY
+	.2byte ITEM_PAYAPA_BERRY
+	.2byte ITEM_TANGA_BERRY
+	.2byte ITEM_CHARTI_BERRY
+	.2byte ITEM_KASIB_BERRY
+	.2byte ITEM_HABAN_BERRY
+	.2byte ITEM_COLBUR_BERRY
+	.2byte ITEM_BABIRI_BERRY
+	.2byte ITEM_ROSELI_BERRY
 	pokemartlistend
 
 SlateportCity_EventScript_ComeBackWithSecretPower::
