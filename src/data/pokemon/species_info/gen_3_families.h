@@ -69,6 +69,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             gOverworldPalette_Treecko,
             gShinyOverworldPalette_Treecko
         )
+        .perfectIVCount = NUM_STATS,
         .levelUpLearnset = sTreeckoLevelUpLearnset,
         .teachableLearnset = sTreeckoTeachableLearnset,
         .eggMoveLearnset = sTreeckoEggMoveLearnset,
@@ -374,6 +375,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             TRACKS_FOOT,
             sAnimTable_Following
         )
+        .perfectIVCount = NUM_STATS,
         .levelUpLearnset = sTorchicLevelUpLearnset,
         .teachableLearnset = sTorchicTeachableLearnset,
         .eggMoveLearnset = sTorchicEggMoveLearnset,
@@ -693,6 +695,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             gOverworldPalette_Mudkip,
             gShinyOverworldPalette_Mudkip
         )
+        .perfectIVCount = NUM_STATS,
         .levelUpLearnset = sMudkipLevelUpLearnset,
         .teachableLearnset = sMudkipTeachableLearnset,
         .eggMoveLearnset = sMudkipEggMoveLearnset,
