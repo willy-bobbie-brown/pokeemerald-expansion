@@ -3,7 +3,6 @@
   "name": "RustboroCity",
   "layout": "LAYOUT_RUSTBORO_CITY",
   "music": "MUS_RUSTBORO",
-  "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_RUSTBORO_CITY",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -249,7 +248,7 @@
   "warp_events": [
     {
       "x": 27,
-      "y": 19,
+      "y": 18,
       "elevation": 0,
       "dest_map": "MAP_RUSTBORO_CITY_GYM",
       "dest_warp_id": "0"
@@ -604,5 +603,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "RustboroCity_EventScript_CuttersHouseSign"
     }
-  ]
+  ],
+  "region": "REGION_HOENN"
 }
