@@ -1018,7 +1018,7 @@ const u16 gTilesetPalettes_Unused2[][16] =
     INCGFX_U16("data/tilesets/secondary/unused_2/palettes/15.pal", ".gbapal"),
 };
 
-const u32 gTilesetTiles_RustboroGym[] = INCGFX_U32("data/tilesets/secondary/rustboro_gym/tiles.png", ".4bpp.fastSmol", "-num_tiles 60 -Wnum_tiles");
+const u32 gTilesetTiles_RustboroGym[] = INCGFX_U32("data/tilesets/secondary/rustboro_gym/tiles.png", ".4bpp.fastSmol", "-num_tiles 172 -Wnum_tiles");
 
 const u16 gTilesetPalettes_RustboroGym[][16] =
 {
