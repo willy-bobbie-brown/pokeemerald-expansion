@@ -42,11 +42,11 @@ PetalburgCity_Gym_OnTransition:
 	end
 
 PetalburgCity_Gym_EventScript_MoveWallyToEntrance::
-	setobjectxyperm LOCALID_PETALBURG_GYM_WALLY, 5, 108
+	setobjectxyperm LOCALID_PETALBURG_GYM_WALLY, 9, 10
 	return
 
 PetalburgCity_Gym_EventScript_MoveNormanToEntrance::
-	setobjectxyperm LOCALID_PETALBURG_GYM_NORMAN, 4, 107
+	setobjectxyperm LOCALID_PETALBURG_GYM_NORMAN, 10, 9
 	return
 
 PetalburgCity_Gym_EventScript_CheckNormanForRematch::
@@ -54,7 +54,7 @@ PetalburgCity_Gym_EventScript_CheckNormanForRematch::
 	specialvar VAR_RESULT, IsTrainerReadyForRematch
 	goto_if_eq VAR_RESULT, TRUE, PetalburgCity_Gym_EventScript_DontMoveNormanToFront
 	goto_if_eq VAR_PETALBURG_GYM_STATE, 8, PetalburgCity_Gym_EventScript_DontMoveNormanToFront
-	setobjectxyperm LOCALID_PETALBURG_GYM_NORMAN, 4, 107
+	setobjectxyperm LOCALID_PETALBURG_GYM_NORMAN, 10, 9
 	return
 
 PetalburgCity_Gym_EventScript_DontMoveNormanToFront::
@@ -93,6 +93,12 @@ PetalburgCity_Gym_EventScript_ReturnFromWallyTutorial::
 	end
 
 PetalburgCity_Gym_Movement_WallyExitGym:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	walk_down
 	walk_down
 	walk_down
@@ -641,6 +647,12 @@ PetalburgCity_Gym_Movement_WallyArriveNorth:
 	walk_right
 	walk_up
 	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
 	walk_in_place_faster_left
 	step_end
 
@@ -651,9 +663,21 @@ PetalburgCity_Gym_Movement_WallyArrive:
 	delay_8
 	walk_up
 	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
 	step_end
 
 PetalburgCity_Gym_Movement_WallyExitNorth:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	walk_down
 	walk_down
 	walk_down
@@ -686,6 +710,12 @@ PetalburgCity_Gym_Movement_PlayerExitWithWallyNorth:
 	delay_16
 	delay_16
 	delay_16
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	walk_down
 	walk_down
 	walk_down
