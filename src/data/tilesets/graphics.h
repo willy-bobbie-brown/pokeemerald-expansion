@@ -108,7 +108,7 @@ const u16 gTilesetPalettes_Mauville[][16] =
     INCGFX_U16("data/tilesets/secondary/mauville/palettes/15.pal", ".gbapal"),
 };
 
-const u32 gTilesetTiles_Lavaridge[] = INCGFX_U32("data/tilesets/secondary/lavaridge/tiles.png", ".4bpp.fastSmol", "-num_tiles 450 -Wnum_tiles");
+const u32 gTilesetTiles_Lavaridge[] = INCGFX_U32("data/tilesets/secondary/lavaridge/tiles.png", ".4bpp.fastSmol", "-num_tiles 498 -Wnum_tiles");
 
 const u16 gTilesetPalettes_Lavaridge[][16] =
 {
