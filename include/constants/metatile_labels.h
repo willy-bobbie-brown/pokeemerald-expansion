@@ -325,6 +325,7 @@
 #define METATILE_Lavaridge_AshGrass             0x207
 #define METATILE_Lavaridge_CaveEntrance_Bottom  0x25E
 #define METATILE_Lavaridge_CaveEntrance_Top     0x256
+#define METATILE_Lavaridge_Door_BattleDome      0x3FC
 #define METATILE_Lavaridge_LavaField            0x271
 #define METATILE_Lavaridge_NormalGrass          0x206
 #define METATILE_Lavaridge_RockWall             0x274
