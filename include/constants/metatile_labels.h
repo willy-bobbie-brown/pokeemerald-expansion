@@ -173,6 +173,7 @@
 
 // gTileset_Dewford
 #define METATILE_Dewford_Door              0x225
+#define METATILE_Dewford_Door_BattleArena  0x316
 #define METATILE_Dewford_Door_BattleTower  0x25D
 
 // gTileset_EliteFour
