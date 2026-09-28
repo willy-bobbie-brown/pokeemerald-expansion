@@ -378,6 +378,7 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_Lavaridge_Door_BattleDome,                    &gTileset_Lavaridge, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_BattleDome, sDoorAnimPalettes_BattleDome},
     {METATILE_Dewford_Door_BattleArena,                     &gTileset_Dewford, DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_BattleArena, sDoorAnimPalettes_BattleArena},
     {METATILE_Mauville_Door_BattleFactory,                  &gTileset_Mauville, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_BattleFactory, sDoorAnimPalettes_Mauville_BattleFactory},
+    {METATILE_Mossdeep_Door_BattleTower,                    &gTileset_Mossdeep, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_BattleTower, sDoorAnimPalettes_BattleTower},
     {METATILE_BattlePalace_Door,                            &gTileset_BattlePalace, DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_BattlePalaceLobby, sDoorAnimPalettes_BattlePalaceLobby},
     {METATILE_Slateport_Door_BattleTent,                    &gTileset_Slateport, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_BattleTent, sDoorAnimPalettes_BattleTent},
     {METATILE_Mauville_Door_BattleTent,                     &gTileset_Mauville, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_BattleTent, sDoorAnimPalettes_BattleTent},

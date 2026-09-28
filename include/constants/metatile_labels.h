@@ -426,6 +426,7 @@
 
 // gTileset_Mossdeep
 #define METATILE_Mossdeep_Door              0x2A1
+#define METATILE_Mossdeep_Door_BattleTower  0x3C8
 #define METATILE_Mossdeep_Door_SpaceCenter  0x2ED
 
 // gTileset_MossdeepGameCorner
