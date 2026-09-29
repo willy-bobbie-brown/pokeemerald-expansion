@@ -3,7 +3,6 @@ DewfordTown_Gym_MapScripts::
 	.byte 0
 
 DewfordTown_Gym_OnTransition:
-	call DewfordTown_Gym_EventScript_SetFlashLevel
 	end
 
 DewfordTown_Gym_EventScript_SetFlashLevel::
@@ -142,7 +141,6 @@ DewfordTown_Gym_EventScript_Brawly::
 	end
 
 DewfordTown_Gym_EventScript_BrawlyDefeated::
-	call DewfordTown_Gym_EventScript_AnimateFlashFullBrightness
 	message DewfordTown_Gym_Text_ReceivedKnuckleBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
