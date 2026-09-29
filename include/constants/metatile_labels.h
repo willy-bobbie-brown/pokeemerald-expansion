@@ -9,6 +9,10 @@
 #define METATILE_BattleDome_Door_Lobby          0x209
 #define METATILE_BattleDome_Door_PreBattleRoom  0x20A
 
+// gTileset_BattleFactory
+#define METATILE_BattleFactory_Mauville_GymFloor_1  0x201
+#define METATILE_BattleFactory_Mauville_GymFloor_2  0x202
+
 // gTileset_BattleFrontier
 #define METATILE_BattleFrontier_CorridorOpenDoor_Bottom  0x20F
 #define METATILE_BattleFrontier_CorridorOpenDoor_Top     0x207
