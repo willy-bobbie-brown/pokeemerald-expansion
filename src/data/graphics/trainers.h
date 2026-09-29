@@ -283,6 +283,9 @@ const u16 gTrainerPalette_RubySapphireBrendan[] = INCGFX_U16("graphics/trainers/
 const u32 gTrainerFrontPic_RubySapphireMay[] = INCGFX_U32("graphics/trainers/front_pics/may_rs.png", ".4bpp.smol");
 const u16 gTrainerPalette_RubySapphireMay[] = INCGFX_U16("graphics/trainers/palettes/may_rs.pal", ".gbapal");
 
+const u32 gTrainerFrontPic_Scott[] = INCGFX_U32("graphics/trainers/front_pics/scott.png", ".4bpp.smol");
+const u16 gTrainerPalette_Scott[] = INCGFX_U16("graphics/trainers/palettes/scott.pal", ".gbapal");
+
 const u32 gTrainerFrontPic_YoungsterFrlg[] = INCGFX_U32("graphics/trainers/front_pics/youngster_frlg.png", ".4bpp.smol");
 const u16 gTrainerPalette_YoungsterFrlg[] = INCGFX_U16("graphics/trainers/palettes/youngster_frlg.pal", ".gbapal");
 
@@ -977,6 +980,10 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     [TRAINER_PIC_PYRAMID_KING_BRANDON] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_PyramidKingBrandon, gTrainerPalette_PyramidKingBrandon),
+    },
+    [TRAINER_PIC_SCOTT] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Scott, gTrainerPalette_Scott),
     },
     [TRAINER_PIC_YOUNGSTER_FRLG] =
     {
