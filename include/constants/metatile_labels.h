@@ -953,11 +953,13 @@
 #define METATILE_Slateport_Door_BattleTent  0x393
 
 // gTileset_Sootopolis
-#define METATILE_Sootopolis_Door             0x21E
-#define METATILE_Sootopolis_Door_Closed      0x248
-#define METATILE_Sootopolis_Door_PeakedRoof  0x21C
-#define METATILE_Sootopolis_GymDoor_Closed   0x250
-#define METATILE_Sootopolis_RoughWater       0x290
+#define METATILE_Sootopolis_Door                0x21E
+#define METATILE_Sootopolis_Door_Closed         0x248
+#define METATILE_Sootopolis_Door_Gym            0x31B
+#define METATILE_Sootopolis_Door_PeakedRoof     0x21C
+#define METATILE_Sootopolis_GymDoor_Closed      0x319
+#define METATILE_Sootopolis_GymDoor_Closed_Alt  0x250
+#define METATILE_Sootopolis_RoughWater          0x290
 
 // gTileset_SootopolisGym
 #define METATILE_SootopolisGym_Ice_Broken   0x206

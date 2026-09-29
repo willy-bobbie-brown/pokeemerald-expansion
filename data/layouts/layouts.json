@@ -1192,10 +1192,10 @@
     {
       "id": "LAYOUT_SOOTOPOLIS_CITY_GYM_1F",
       "name": "SootopolisCity_Gym_1F_Layout",
-      "width": 17,
-      "height": 26,
+      "width": 6,
+      "height": 8,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SootopolisGym",
+      "secondary_tileset": "gTileset_BattleFrontier",
       "border_filepath": "data/layouts/SootopolisCity_Gym_1F/border.bin",
       "blockdata_filepath": "data/layouts/SootopolisCity_Gym_1F/map.bin",
       "layout_version": "emerald"
