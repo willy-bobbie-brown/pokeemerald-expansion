@@ -134,19 +134,19 @@ LavaridgeTown_Gym_EventScript_WarpCoolHall::
 	return
 
 LavaridgeTown_Gym_EventScript_WarpBeautyHall::
-	warp MAP_CONTEST_HALL_BEAUTY, 7, 5
+	warp MAP_LAVARIDGE_TOWN_GYM_CONTEST_HALL, 7, 5
 	return
 
 LavaridgeTown_Gym_EventScript_WarpCuteHall::
-	warp MAP_CONTEST_HALL_CUTE, 7, 5
+	warp MAP_LAVARIDGE_TOWN_GYM_CONTEST_HALL, 7, 5
 	return
 
 LavaridgeTown_Gym_EventScript_WarpSmartHall::
-	warp MAP_CONTEST_HALL_SMART, 7, 5
+	warp MAP_LAVARIDGE_TOWN_GYM_CONTEST_HALL, 7, 5
 	return
 
 LavaridgeTown_Gym_EventScript_WarpToughHall::
-	warp MAP_CONTEST_HALL_TOUGH, 7, 5
+	warp MAP_LAVARIDGE_TOWN_GYM_CONTEST_HALL, 7, 5
 	return
 
 LavaridgeTown_Gym_1F_EventScript_Flannery::

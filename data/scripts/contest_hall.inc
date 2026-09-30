@@ -1116,6 +1116,7 @@ ContestHall_EventScript_GivePrizeIfWinner::
 
 ContestHall_EventScript_GiveContestPrizes::
 	call_if_eq VAR_CONTEST_TYPE, CONTEST_TYPE_NPC_SUPER, ContestHall_EventScript_SetSketchFlag
+	setflag FLAG_WON_LAVARIDGE_CONTEST
 	specialvar VAR_RESULT, HasMonWonThisContestBefore
 	goto_if_eq VAR_RESULT, FALSE, ContestHall_EventScript_ReceiveContestRibbon
 	goto_if_eq VAR_CONTEST_RANK, CONTEST_RANK_MASTER, ContestHall_EventScript_GiveLuxuryBall
