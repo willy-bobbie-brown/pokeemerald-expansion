@@ -3,14 +3,86 @@ MauvilleCity_Gym_MapScripts::
 	.byte 0
 
 MauvilleCity_Gym_OnLoad:
-	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, MauvilleCity_Gym_EventScript_DeactivatePuzzle
-	switch VAR_MAUVILLE_GYM_STATE
-	case 0, MauvilleCity_Gym_EventScript_UpdateBarriers
-	case 1, MauvilleCity_Gym_EventScript_Switch1Pressed
-	case 2, MauvilleCity_Gym_EventScript_Switch2Pressed
-	case 3, MauvilleCity_Gym_EventScript_Switch3Pressed
-	case 4, MauvilleCity_Gym_EventScript_Switch4Pressed
+	call_if_set FLAG_MAUVILLE_GYM_RIDDLES_SOLVED, MauvilleCity_Gym_EventScript_OpenWallSection
 	end
+
+MauvilleCity_Gym_EventScript_RiddleMaster::
+    lock
+    faceplayer
+    goto_if_set FLAG_MAUVILLE_GYM_RIDDLES_SOLVED, MauvilleCity_Gym_EventScript_RiddlesAlreadySolved
+    msgbox MauvilleCity_Gym_Text_Riddle1, MSGBOX_DEFAULT
+    multichoice 0, 0, MULTI_MAUVILLE_RIDDLE1, FALSE
+    compare VAR_RESULT, 3 @ Scizor
+    goto_if_eq MauvilleCity_Gym_EventScript_Riddle2
+    goto MauvilleCity_Gym_EventScript_WrongAnswer
+
+MauvilleCity_Gym_EventScript_Riddle2::
+	waitse
+	playse SE_SUCCESS
+	waitse
+    msgbox MauvilleCity_Gym_Text_Riddle2, MSGBOX_DEFAULT
+    multichoice 0, 0, MULTI_MAUVILLE_RIDDLE2, FALSE
+    compare VAR_RESULT, 1 @ 'Til Death
+    goto_if_eq MauvilleCity_Gym_EventScript_Riddle3
+    goto MauvilleCity_Gym_EventScript_WrongAnswer
+
+MauvilleCity_Gym_EventScript_Riddle3::
+	waitse
+	playse SE_SUCCESS
+	waitse
+    msgbox MauvilleCity_Gym_Text_Riddle3, MSGBOX_DEFAULT
+    multichoice 0, 0, MULTI_MAUVILLE_RIDDLE3, FALSE
+    @ Any answer passes - it's a joke question, not real trivia
+    goto MauvilleCity_Gym_EventScript_AllCorrect
+
+MauvilleCity_Gym_EventScript_WrongAnswer::
+	waitse
+    playse SE_FAILURE
+    waitse
+    msgbox MauvilleCity_Gym_Text_WrongAnswer, MSGBOX_DEFAULT
+    release
+    end
+
+MauvilleCity_Gym_EventScript_AllCorrect::
+	waitse
+	playse SE_SUCCESS
+	waitse
+    setflag FLAG_MAUVILLE_GYM_RIDDLES_SOLVED
+    msgbox MauvilleCity_Gym_Text_AllRiddlesCorrect, MSGBOX_DEFAULT
+    playse SE_UNLOCK
+    call MauvilleCity_Gym_EventScript_OpenWallSection
+    special DrawWholeMapView
+    waitse
+    release
+    end
+
+MauvilleCity_Gym_EventScript_RiddlesAlreadySolved::
+    msgbox MauvilleCity_Gym_Text_AlreadySolved, MSGBOX_DEFAULT
+    release
+    end
+
+@ Shared block: sets all 18 tiles in the 4,11 -> 6,16 rectangle to floor.
+@ Called both when the player solves it live, and on map load if already solved.
+MauvilleCity_Gym_EventScript_OpenWallSection::
+    setmetatile 4, 11, METATILE_BattleFactory_MauvilleGym_Floor_1, FALSE
+    setmetatile 5, 11, METATILE_BattleFactory_MauvilleGym_Floor_2, FALSE
+    setmetatile 6, 11, METATILE_BattleFactory_MauvilleGym_Floor_1, FALSE
+    setmetatile 4, 12, METATILE_BattleFactory_MauvilleGym_Floor_2, FALSE
+    setmetatile 5, 12, METATILE_BattleFactory_MauvilleGym_Floor_1, FALSE
+    setmetatile 6, 12, METATILE_BattleFactory_MauvilleGym_Floor_2, FALSE
+    setmetatile 4, 13, METATILE_BattleFactory_MauvilleGym_Floor_1, FALSE
+    setmetatile 5, 13, METATILE_BattleFactory_MauvilleGym_Floor_2, FALSE
+    setmetatile 6, 13, METATILE_BattleFactory_MauvilleGym_Floor_1, FALSE
+    setmetatile 4, 14, METATILE_BattleFactory_MauvilleGym_Floor_2, FALSE
+    setmetatile 5, 14, METATILE_BattleFactory_MauvilleGym_Floor_1, FALSE
+    setmetatile 6, 14, METATILE_BattleFactory_MauvilleGym_Floor_2, FALSE
+    setmetatile 4, 15, METATILE_BattleFactory_MauvilleGym_Floor_1, FALSE
+    setmetatile 5, 15, METATILE_BattleFactory_MauvilleGym_Floor_2, FALSE
+    setmetatile 6, 15, METATILE_BattleFactory_MauvilleGym_Floor_1, FALSE
+    setmetatile 4, 16, METATILE_BattleFactory_MauvilleGym_Floor_2, FALSE
+    setmetatile 5, 16, METATILE_BattleFactory_MauvilleGym_Floor_1, FALSE
+    setmetatile 6, 16, METATILE_BattleFactory_MauvilleGym_Floor_2, FALSE
+    return
 
 MauvilleCity_Gym_EventScript_UpdateBarriers::
 	goto_if_set FLAG_MAUVILLE_GYM_BARRIERS_STATE, MauvilleCity_Gym_EventScript_SetAltBarriers
@@ -96,7 +168,6 @@ MauvilleCity_Gym_EventScript_WattsonDefeated::
 	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
 	setvar VAR_0x8008, 3
 	call Common_EventScript_SetGymTrainers
-	special MauvilleGymDeactivatePuzzle
 	special DrawWholeMapView
 	playse SE_UNLOCK
 	call MauvilleCity_Gym_EventScript_GiveShockWave
@@ -255,6 +326,42 @@ MauvilleCity_Gym_EventScript_GymStatue::
 	msgbox MauvilleCity_Gym_Text_GymStatue, MSGBOX_DEFAULT
 	releaseall
 	end
+
+MauvilleCity_Gym_Text_Riddle1:
+	.string "Hello {PLAYER},\n"
+	.string "I want to play a game.\l"
+	.string "You've wasted away your whole life\l"
+	.string "playing video games like this.\l"
+	.string "Now we will finally get to see\l"
+	.string "if that time has been spent well.\p"
+    .string "Across every POKéMON game or anime,\n"
+    .string "which of the following POKéMON has\l"
+    .string "FACTORY HEAD NOLAND never been\l"
+    .string "seen using?$"
+
+MauvilleCity_Gym_Text_Riddle2:
+    .string "In Episode 8, Season 7 of FAMILY GUY,\n"
+    .string "Peter buys a brain-damaged horse from\l"
+    .string "Louisville, Kentucky while shopping\l"
+    .string "for groceries.\p"
+    .string "What was the name of this horse?$"
+
+MauvilleCity_Gym_Text_Riddle3:
+    .string "One last thing…\n"
+    .string "Should you subscribe?$"
+
+MauvilleCity_Gym_Text_WrongAnswer:
+    .string "Hmm… that's not it. Try again\n"
+    .string "sometime!$"
+
+MauvilleCity_Gym_Text_AllRiddlesCorrect:
+    .string "Impressive! You really know your\n"
+    .string "trivia. Here, let me show you\l"
+    .string "something…$"
+
+MauvilleCity_Gym_Text_AlreadySolved:
+    .string "You already proved your knowledge.\n"
+    .string "That section's open for good now.$"
 
 MauvilleCity_Gym_Text_GymGuideAdvice:
 	.string "Hey, how's it going, CHAMPION-\n"

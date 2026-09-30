@@ -1122,6 +1122,43 @@ static const struct MenuAction sMultichoiceList_HOF_Eggs_Victories_Quit[] = {
     {gText_ShopQuit}
 };
 
+static const u8 sText_Ninjask[] = _("NINJASK");
+static const u8 sText_Articuno[] = _("ARTICUNO");
+static const u8 sText_Pinsir[] = _("PINSIR");
+static const u8 sText_Scizor[] = _("SCIZOR");
+
+static const struct MenuAction MultichoiceList_MauvilleRiddle1[] =
+{
+    {sText_Ninjask},
+    {sText_Articuno},
+    {sText_Pinsir},
+    {sText_Scizor},
+};
+
+static const u8 sText_Xerxes[] = _("XERXES");
+static const u8 sText_TilDeath[] = _("TIL' DEATH");
+static const u8 sText_Gonzo[] = _("GONZO");
+static const u8 sText_WeddingBells[] = _("WEDDING BELLS");
+
+static const struct MenuAction MultichoiceList_MauvilleRiddle2[] =
+{
+    {sText_Xerxes},
+    {sText_TilDeath},
+    {sText_Gonzo},
+    {sText_WeddingBells},
+};
+
+static const u8 sText_Please[] = _("PLEASE");
+static const u8 sText_PrettyPlease[] = _("PRETTY PLEASE");
+static const u8 sText_PrettyPleaseCherry[] = _("PRETTY PLEASE WITH A CHERRY ON TOP");
+
+static const struct MenuAction MultichoiceList_MauvilleRiddle3[] =
+{
+    {sText_Please},
+    {sText_PrettyPlease},
+    {sText_PrettyPleaseCherry},
+};
+
 static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
@@ -1294,6 +1331,9 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_HOF_VICTORIES_QUIT]                         = MULTICHOICE(sMultichoiceList_HOF_Victories_Quit),
     [MULTI_EGGS_VICTORIES_QUIT]                        = MULTICHOICE(sMultichoiceList_Eggs_Victories_Quit),
     [MULTI_HOF_EGGS_VICTORIES_QUIT]                    = MULTICHOICE(sMultichoiceList_HOF_Eggs_Victories_Quit),
+    [MULTI_MAUVILLE_RIDDLE1]                           = MULTICHOICE(MultichoiceList_MauvilleRiddle1),
+    [MULTI_MAUVILLE_RIDDLE2]                           = MULTICHOICE(MultichoiceList_MauvilleRiddle2),
+    [MULTI_MAUVILLE_RIDDLE3]                           = MULTICHOICE(MultichoiceList_MauvilleRiddle3),
 };
 
 const u8 *const gStdStrings[] =
