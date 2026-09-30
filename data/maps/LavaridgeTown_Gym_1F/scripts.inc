@@ -3,8 +3,9 @@ LavaridgeTown_Gym_1F_MapScripts::
 	.byte 0
 
 LavaridgeTown_Gym_1F_OnTransition:
-	call LavaridgeTown_Gym_1F_EventScript_SetTrainerTempVars
-	call LavaridgeTown_Gym_1F_EventScript_CheckBuryTrainers
+@	Commenting these out for now
+@	call LavaridgeTown_Gym_1F_EventScript_SetTrainerTempVars
+@	call LavaridgeTown_Gym_1F_EventScript_CheckBuryTrainers
 	end
 
 @ Unclear where/if these temp vars are getting checked
@@ -43,6 +44,111 @@ LavaridgeTown_Gym_1F_EventScript_CheckBuryDanielle::
 LavaridgeTown_Gym_1F_EventScript_EndCheckBuryTrainers::
 	return
 
+LavaridgeTown_Gym_EventScript_ContestGatekeeper::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_LAVARIDGE_GYM, LavaridgeTown_Gym_EventScript_GymAlreadyCleared
+	goto_if_set FLAG_WON_LAVARIDGE_CONTEST, LavaridgeTown_Gym_EventScript_ReadyForLeader
+	msgbox LavaridgeTown_Gym_Text_MustWinContestFirst, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq LavaridgeTown_Gym_EventScript_DeclineContest
+	setvar VAR_CONTEST_RANK, CONTEST_RANK_NORMAL
+	multichoice 15, 0, MULTI_CONTEST_TYPE, 1
+	switch VAR_RESULT
+	case 0, LavaridgeTown_Gym_EventScript_SetCoolContest
+	case 1, LavaridgeTown_Gym_EventScript_SetBeautyContest
+	case 2, LavaridgeTown_Gym_EventScript_SetCuteContest
+	case 3, LavaridgeTown_Gym_EventScript_SetSmartContest
+	case 4, LavaridgeTown_Gym_EventScript_SetToughContest
+	case 5, LavaridgeTown_Gym_EventScript_DeclineContest
+	release
+	end
+
+LavaridgeTown_Gym_EventScript_GymAlreadyCleared::
+	msgbox LavaridgeTown_Gym_Text_AlreadyBeatGym, MSGBOX_DEFAULT
+	release
+	end
+
+LavaridgeTown_Gym_EventScript_ReadyForLeader::
+	msgbox LavaridgeTown_Gym_Text_YouEarnedYourShot, MSGBOX_DEFAULT
+	clearflag FLAG_WON_LAVARIDGE_CONTEST
+	@ NEED TO SCRIPT WALKING ACTION FOR BATTLE
+	trainerbattle_single TRAINER_FLANNERY_1, LavaridgeTown_Gym_1F_Text_FlanneryIntro, LavaridgeTown_Gym_1F_Text_FlanneryDefeat, LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated, NO_MUSIC
+	release
+	end
+
+LavaridgeTown_Gym_EventScript_DeclineContest::
+	msgbox LavaridgeTown_Gym_Text_ComeBackWhenReady, MSGBOX_DEFAULT
+	release
+	end
+
+LavaridgeTown_Gym_EventScript_SetCoolContest::
+	setvar VAR_CONTEST_CATEGORY, CONTEST_CATEGORY_COOL
+	goto LavaridgeTown_Gym_EventScript_ChooseContestMon
+
+LavaridgeTown_Gym_EventScript_SetBeautyContest::
+	setvar VAR_CONTEST_CATEGORY, CONTEST_CATEGORY_BEAUTY
+	goto LavaridgeTown_Gym_EventScript_ChooseContestMon
+
+LavaridgeTown_Gym_EventScript_SetCuteContest::
+	setvar VAR_CONTEST_CATEGORY, CONTEST_CATEGORY_CUTE
+	goto LavaridgeTown_Gym_EventScript_ChooseContestMon
+
+LavaridgeTown_Gym_EventScript_SetSmartContest::
+	setvar VAR_CONTEST_CATEGORY, CONTEST_CATEGORY_SMART
+	goto LavaridgeTown_Gym_EventScript_ChooseContestMon
+
+LavaridgeTown_Gym_EventScript_SetToughContest::
+	setvar VAR_CONTEST_CATEGORY, CONTEST_CATEGORY_TOUGH
+	goto LavaridgeTown_Gym_EventScript_ChooseContestMon
+
+LavaridgeTown_Gym_EventScript_ChooseContestMon::
+	msgbox LavaridgeTown_Gym_Text_EnterWhichPokemon, MSGBOX_DEFAULT
+	choosecontestmon
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, LavaridgeTown_Gym_EventScript_DeclineContest
+	special TryEnterContestMon
+	goto_if_eq VAR_RESULT, CANT_ENTER_CONTEST, LavaridgeTown_Gym_EventScript_DeclineContest
+	goto_if_eq VAR_RESULT, CANT_ENTER_CONTEST_EGG, LavaridgeTown_Gym_EventScript_DeclineContest
+	goto_if_eq VAR_RESULT, CANT_ENTER_CONTEST_FAINTED, LavaridgeTown_Gym_EventScript_DeclineContest
+	msgbox LavaridgeTown_Gym_Text_GoodLuck, MSGBOX_DEFAULT
+	closemessage
+	releaseall
+	setvar VAR_CONTEST_HALL_STATE, 1
+	special SetContestTrainerGfxIds
+	call LilycoveCity_ContestLobby_EventScript_SetPlayerGfx
+	call LavaridgeTown_Gym_EventScript_WarpToContestHall
+	waitstate
+	end
+
+LavaridgeTown_Gym_EventScript_WarpToContestHall::
+	switch VAR_CONTEST_CATEGORY
+	case CONTEST_CATEGORY_COOL, LavaridgeTown_Gym_EventScript_WarpCoolHall
+	case CONTEST_CATEGORY_BEAUTY, LavaridgeTown_Gym_EventScript_WarpBeautyHall
+	case CONTEST_CATEGORY_CUTE, LavaridgeTown_Gym_EventScript_WarpCuteHall
+	case CONTEST_CATEGORY_SMART, LavaridgeTown_Gym_EventScript_WarpSmartHall
+	case CONTEST_CATEGORY_TOUGH, LavaridgeTown_Gym_EventScript_WarpToughHall
+	return
+
+LavaridgeTown_Gym_EventScript_WarpCoolHall::
+	warp MAP_LAVARIDGE_TOWN_GYM_CONTEST_HALL, 7, 5
+	return
+
+LavaridgeTown_Gym_EventScript_WarpBeautyHall::
+	warp MAP_CONTEST_HALL_BEAUTY, 7, 5
+	return
+
+LavaridgeTown_Gym_EventScript_WarpCuteHall::
+	warp MAP_CONTEST_HALL_CUTE, 7, 5
+	return
+
+LavaridgeTown_Gym_EventScript_WarpSmartHall::
+	warp MAP_CONTEST_HALL_SMART, 7, 5
+	return
+
+LavaridgeTown_Gym_EventScript_WarpToughHall::
+	warp MAP_CONTEST_HALL_TOUGH, 7, 5
+	return
+
 LavaridgeTown_Gym_1F_EventScript_Flannery::
 	trainerbattle_single TRAINER_FLANNERY_1, LavaridgeTown_Gym_1F_Text_FlanneryIntro, LavaridgeTown_Gym_1F_Text_FlanneryDefeat, LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -63,7 +169,7 @@ LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated::
 	addvar VAR_PETALBURG_GYM_STATE, 1
 	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
 	setvar VAR_0x8008, 4
-	call Common_EventScript_SetGymTrainers
+@	call Common_EventScript_SetGymTrainers
 	setflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WALLY
 	setvar VAR_LAVARIDGE_TOWN_STATE, 1
 	call LavaridgeTown_Gym_1F_EventScript_GiveOverheat
@@ -179,6 +285,36 @@ LavaridgeTown_Gym_1F_EventScript_GymStatue::
 	msgbox LavaridgeTown_Gym_1F_Text_GymStatue, MSGBOX_DEFAULT
 	releaseall
 	end
+
+LavaridgeTown_Gym_Text_GoodLuck:
+	.string "Good luck!$"
+
+LavaridgeTown_Gym_Text_EnterWhichPokemon:
+	.string "Please select which POKéMON you\n"
+	.string "would like to enter.$"
+
+LavaridgeTown_Gym_Text_AlreadyBeatGym:
+	.string "Congratulations on your triumphant\n"
+	.string "victory over DOME ACE TUCKER.\p"
+	.string "We hope to see you again soon!$"
+
+LavaridgeTown_Gym_Text_YouEarnedYourShot:
+	.string "Great job {PLAYER}!\n"
+	.string "You have earned a chance to battle\l"
+	.string "against our very own DOME ACE TUCKER.\p"
+	.string "I hope you're ready.$"
+
+LavaridgeTown_Gym_Text_MustWinContestFirst:
+	.string "Hello!\n" 
+	.string "Welcome to the BATTLE DOME.\p"
+	.string "If you're wishing to challenge the\n"
+	.string "leader of the facility,\l"
+	.string "you must first prove yourself\l" 
+	.string "in a POKéMON CONTEST.\p"
+	.string "Would you like to register?$"
+
+LavaridgeTown_Gym_Text_ComeBackWhenReady:
+	.string "Let me know when you're ready.$"
 
 LavaridgeTown_Gym_1F_Text_GymGuideAdvice:
 	.string "Hey, how's it going, CHAMPION-\n"

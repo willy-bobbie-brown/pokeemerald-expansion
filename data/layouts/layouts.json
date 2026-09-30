@@ -9323,6 +9323,17 @@
       "border_height": 2,
       "border_width": 2,
       "layout_version": "frlg"
+    },
+    {
+      "id": "LAYOUT_LAVARIDGE_TOWN_GYM_CONTEST_HALL_LAYOUT",
+      "name": "LavaridgeTown_Gym_ContestHall_Layout",
+      "width": 15,
+      "height": 11,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Contest",
+      "border_filepath": "data/layouts/LavaridgeTown_Gym_ContestHall_Layout/border.bin",
+      "blockdata_filepath": "data/layouts/LavaridgeTown_Gym_ContestHall_Layout/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }
