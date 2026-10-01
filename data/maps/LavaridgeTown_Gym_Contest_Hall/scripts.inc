@@ -79,7 +79,8 @@ LavaridgeTown_Gym_Contest_Hall_EventScript_Contest::
 	end
 
 LavaridgeTown_Gym_Contest_Hall_EventScript_ExitWarp::
-	warp MAP_LAVARIDGE_TOWN_GYM_1F, 13, 15
+	turnobject LOCALID_PLAYER, DIR_NORTH
+	warp MAP_LAVARIDGE_TOWN_GYM_1F, 8, 10
 	waitstate
 	end
 
