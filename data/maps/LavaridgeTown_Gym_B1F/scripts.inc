@@ -1,11 +1,16 @@
 LavaridgeTown_Gym_B1F_MapScripts::
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, LavaridgeTown_Gym_B1F_OnWarp
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, LavaridgeTown_Gym_B1F_OnFrame
 	map_script MAP_SCRIPT_ON_RETURN_TO_FIELD, LavaridgeTown_Gym_B1F_OnReturn
 	.byte 0
 
 LavaridgeTown_Gym_B1F_OnWarp:
 	map_script_2 VAR_TEMP_1, 0, LavaridgeTown_Gym_B1F_EventScript_CreateAudienceAndFaceUp
-	.2byte
+	.2byte 0
+
+LavaridgeTown_Gym_B1F_OnFrame:
+	map_script_2 VAR_TEMP_2, 0, LavaridgeTown_Gym_B1F_EventScript_IntroCutScene
+	.2byte 0
 
 LavaridgeTown_Gym_B1F_OnReturn:
 	call LavaridgeTown_Gym_B1F_EventScript_CreateAudience
@@ -16,6 +21,28 @@ LavaridgeTown_Gym_B1F_OnReturn:
 LavaridgeTown_Gym_B1F_EventScript_CreateAudienceAndFaceUp::
 	call LavaridgeTown_Gym_B1F_EventScript_CreateAudience
 	call LavaridgeTown_Gym_Movement_FaceUp
+	return
+
+LavaridgeTown_Gym_B1F_EventScript_IntroCutScene::
+	setvar VAR_TEMP_2, 1
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, LavaridgeTown_Gym_B1F_Movement_PlayerEnter
+    waitmovement 0
+	applymovement LOCALID_LAVARIDGE_GYM_LEADER, LavaridgeTown_Gym_B1F_Movement_TuckerEnterAndDance
+	playse SE_M_ENCORE2
+    waitse
+    playse SE_M_ENCORE2
+    waitse
+    playse SE_M_ENCORE2
+    waitse
+    playse SE_M_ENCORE2
+    waitse
+    playse SE_M_ENCORE2
+    waitse
+    playse SE_M_ENCORE2
+    waitse
+    waitmovement 0
+	releaseall
 	return
 
 LavaridgeTown_Gym_B1F_EventScript_CreateAudience::
@@ -103,6 +130,124 @@ LavaridgeTown_Gym_B1F_EventScript_FlanneryRematch::
 	trainerbattle_rematch_double TRAINER_FLANNERY_1, LavaridgeTown_Gym_B1F_Text_FlanneryPreRematch, LavaridgeTown_Gym_B1F_Text_FlanneryRematchDefeat, LavaridgeTown_Gym_B1F_Text_FlanneryRematchNeedTwoMons
 	msgbox LavaridgeTown_Gym_B1F_Text_FlanneryPostRematch, MSGBOX_AUTOCLOSE
 	end
+
+LavaridgeTown_Gym_B1F_Movement_PlayerEnter:
+	walk_up
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+LavaridgeTown_Gym_B1F_Movement_TuckerEnterAndDance:
+	set_visible
+	walk_up
+	walk_up
+	walk_up
+	face_left
+	delay_8
+	delay_4
+	face_down
+	delay_8
+	delay_4
+	face_right
+	delay_8
+	delay_4
+	face_up
+	delay_8
+	delay_4
+	face_left
+	delay_16
+	walk_fast_up
+	walk_fast_up
+	face_left
+	delay_8
+	delay_4
+	face_down
+	delay_8
+	delay_4
+	face_right
+	delay_8
+	delay_4
+	face_up
+	delay_8
+	delay_4
+	face_left
+	jump_2_left
+	unlock_facing_direction
+	face_up
+	lock_facing_direction
+	jump_2_left
+	jump_2_left
+	unlock_facing_direction
+	face_right
+	lock_facing_direction
+	jump_2_left
+	unlock_facing_direction
+	face_down
+	delay_2
+	face_left
+	delay_8
+	delay_4
+	face_up
+	delay_8
+	delay_4
+	face_right
+	delay_8
+	delay_4
+	face_down
+	delay_8
+	delay_4
+	face_left
+	delay_4
+	face_up
+	delay_4
+	face_right
+	delay_4
+	face_down
+	delay_4
+	face_left
+	delay_2
+	face_up
+	delay_2
+	face_right
+	delay_2
+	face_down
+	delay_2
+	face_left
+	lock_facing_direction
+	walk_right
+	walk_slow_right
+	walk_right
+	walk_slow_right
+	unlock_facing_direction
+	face_up
+	delay_16
+	jump_in_place_up
+	jump_in_place_up
+	delay_16
+	walk_right
+	walk_right
+	walk_right
+	jump_in_place_up
+	delay_16
+	walk_right
+	walk_down
+	walk_down
+	face_left
+	delay_2
+	face_up
+	delay_2
+	face_right
+	delay_2
+	face_down
+	delay_2
+	face_left
+	delay_4
+	walk_left
+	walk_left
+	step_end
 
 @ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
