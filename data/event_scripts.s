@@ -1740,3 +1740,9 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/wild_encounter.inc"
 
 	.include "data/maps/LavaridgeTown_Gym_Contest_Hall/scripts.inc"
+
+	.include "data/maps/FortreeCity_Gym_Outside/scripts.inc"
+
+	.include "data/maps/FortreeCity_Gym_3F/scripts.inc"
+
+	.include "data/maps/FortreeCity_Gym_2F/scripts.inc"

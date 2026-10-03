@@ -137,7 +137,6 @@ LavaridgeTown_Gym_B1F_Movement_PlayerEnter:
 	walk_up
 	walk_right
 	walk_right
-	walk_right
 	step_end
 
 LavaridgeTown_Gym_B1F_Movement_TuckerEnterAndDance:

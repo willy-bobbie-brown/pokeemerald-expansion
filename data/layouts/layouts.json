@@ -1093,10 +1093,10 @@
     {
       "id": "LAYOUT_FORTREE_CITY_GYM",
       "name": "FortreeCity_Gym_Layout",
-      "width": 20,
-      "height": 25,
+      "width": 13,
+      "height": 12,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_FortreeGym",
+      "secondary_tileset": "gTileset_BattlePyramid",
       "border_filepath": "data/layouts/FortreeCity_Gym/border.bin",
       "blockdata_filepath": "data/layouts/FortreeCity_Gym/map.bin",
       "layout_version": "emerald"
@@ -9333,6 +9333,39 @@
       "secondary_tileset": "gTileset_Contest",
       "border_filepath": "data/layouts/LavaridgeTown_Gym_ContestHall_Layout/border.bin",
       "blockdata_filepath": "data/layouts/LavaridgeTown_Gym_ContestHall_Layout/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_FORTREE_CITY_GYM_OUTSIDE",
+      "name": "FortreeCity_Gym_Outside_Layout",
+      "width": 35,
+      "height": 23,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattlePyramid",
+      "border_filepath": "data/layouts/FortreeCity_Gym_Outside/border.bin",
+      "blockdata_filepath": "data/layouts/FortreeCity_Gym_Outside/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_FORTREE_CITY_GYM_3F",
+      "name": "FortreeCity_Gym_3F_Layout",
+      "width": 13,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattlePyramid",
+      "border_filepath": "data/layouts/FortreeCity_Gym_3F/border.bin",
+      "blockdata_filepath": "data/layouts/FortreeCity_Gym_3F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_FORTREE_CITY_GYM_2F",
+      "name": "FortreeCity_Gym_2F_Layout",
+      "width": 13,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattlePyramid",
+      "border_filepath": "data/layouts/FortreeCity_Gym_2F/border.bin",
+      "blockdata_filepath": "data/layouts/FortreeCity_Gym_2F/map.bin",
       "layout_version": "emerald"
     }
   ]

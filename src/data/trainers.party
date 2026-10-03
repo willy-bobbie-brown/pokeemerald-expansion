@@ -5002,7 +5002,6 @@ Jolly Nature
 - Yawn
 - Aerial Ace
 
-
 === TRAINER_WINONA_1 ===
 Name: BRANDON
 Class: Pyramid King
@@ -5013,36 +5012,9 @@ Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Smart Trainer / Prediction
 
-Regirock @ Quick Claw
-Ability: Sturdy
-Level: 31
-Adamant Nature
-- Explosion
-- Superpower
-- Rock Slide
-- Thunder Wave
-
-Regice @ Chesto Berry
-Ability: Clear Body
-Level: 31
-Bold Nature
-- Ice Beam
-- Lock-On
-- Zap Cannon
-- Rest
-
-Registeel @ Leftovers
-Ability: Clear Body
-Level: 31
-Careful Nature
-- Iron Defense
-- Body Press
-- Heavy Slam
-- Toxic
-
 Articuno @ Bright Powder
 Ability: Snow Cloak
-Level: 31
+Level: 33
 Timid Nature
 - Sheer Cold
 - Snowscape
@@ -5051,16 +5023,16 @@ Timid Nature
 
 Zapdos @ Sitrus Berry
 Ability: Static
-Level: 31
+Level: 33
 Timid Nature
 - Tailwind
 - Roost
-- Shock Wave
+- Thunderbolt
 - Ancient Power
 
 Moltres @ White Herb
 Ability: Flame Body
-Level: 31
+Level: 33
 Timid Nature
 - Air Slash
 - Flamethrower
@@ -16947,3 +16919,40 @@ Double Battle: No
 Kyogre
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_BRANDON_PRE ===
+Name: BRANDON
+Class: Pyramid King
+Pic: Pyramid King Brandon
+Gender: Male
+Music: Male
+Items: Hyper Potion / Hyper Potion
+Double Battle: No
+AI: Smart Trainer / Prediction
+
+Regirock @ Quick Claw
+Ability: Sturdy
+Level: 33
+Adamant Nature
+- Explosion
+- Superpower
+- Rock Slide
+- Thunder Wave
+
+Regice @ Chesto Berry
+Ability: Clear Body
+Level: 33
+Bold Nature
+- Ice Beam
+- Lock-On
+- Zap Cannon
+- Rest
+
+Registeel @ Leftovers
+Ability: Clear Body
+Level: 33
+Careful Nature
+- Iron Defense
+- Body Press
+- Heavy Slam
+- Toxic
