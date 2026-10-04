@@ -304,7 +304,10 @@
     "MossdeepCity_SpaceCenter_1F",
     "MossdeepCity_SpaceCenter_2F",
     "MossdeepCity_GameCorner_1F",
-    "MossdeepCity_GameCorner_B1F"
+    "MossdeepCity_GameCorner_B1F",
+    "Mossdeep_City_Gym_Elevator",
+    "Mossdeep_City_Gym_Corridor",
+    "Mossdeep_City_Gym_BattleRoom"
   ],
   "gMapGroup_IndoorSootopolis": [
     "SootopolisCity_Gym_1F",

@@ -5052,7 +5052,7 @@ AI: Smart Trainer / Prediction / Powerful Status / Double Ace Pokemon
 Espeon @ Terrain Extender
 Ability: Magic Bounce
 Level: 40
-Bold Nature
+Modest Nature
 - Psychic Terrain
 - Ally Switch
 - Psychic
@@ -10740,12 +10740,12 @@ Sharpedo
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_TERRY ===
-Name: TERRY
-Class: Psychic
-Pic: Psychic F
-Gender: Female
-Music: Intense
+=== TRAINER_CLIFFORD ===
+Name: CLIFFORD
+Class: Gentleman
+Pic: Gentleman
+Gender: Male
+Music: Rich
 Double Battle: No
 AI: Check Bad Move
 
@@ -10779,18 +10779,32 @@ Kadabra
 Level: 36
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_CLIFFORD ===
-Name: CLIFFORD
-Class: Gentleman
-Pic: Gentleman
-Gender: Male
-Music: Rich
-Double Battle: No
-AI: Check Bad Move
+=== TRAINER_TERRY ===
+Name: TERRY
+Class: Psychic
+Pic: Psychic F
+Gender: Female
+Music: Intense
+Double Battle: Yes
+AI: Smart Trainer / Prediction / Powerful Status / Double Ace Pokemon
 
-Girafarig
-Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Pelipper @ Damp Rock
+Ability: Drizzle
+Level: 40
+Bold Nature
+- Hurricane
+- Weather Ball
+- Tailwind
+- Surf
+
+Lapras @ Assault Vest
+Ability: Water Absorb
+Level: 40
+Timid Nature
+- Freeze-Dry
+- Weather Ball
+- Thunder
+- Hyper Voice
 
 === TRAINER_NICHOLAS ===
 Name: NICHOLAS
@@ -10798,12 +10812,26 @@ Class: Psychic
 Pic: Psychic M
 Gender: Male
 Music: Intense
-Double Battle: No
-AI: Check Bad Move
+Double Battle: Yes
+AI: Smart Trainer / Prediction / Powerful Status / Double Ace Pokemon
 
-Wobbuffet
-Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Torkoal @ Heat Rock
+Ability: Drought
+Level: 40
+Bold Nature
+- Eruption
+- Earth Power
+- Solar Beam
+- Heat Wave
+
+Venusaur @ Focus Sash
+Ability: Chlorophyll
+Level: 40
+Modest Nature
+- Sleep Powder
+- Sludge Bomb
+- Giga Drain
+- Earth Power
 
 === TRAINER_GRUNT_SPACE_CENTER_3 ===
 Name: GRUNT
@@ -10880,12 +10908,26 @@ Class: Psychic
 Pic: Psychic F
 Gender: Female
 Music: Intense
-Double Battle: No
-AI: Check Bad Move
+Double Battle: Yes
+AI: Smart Trainer / Prediction / Powerful Status / Double Ace Pokemon
 
-Natu
-Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Scizor @ Sitrus Berry
+Ability: Technician
+Level: 40
+Adamant Nature
+- Close Combat
+- Swords Dance
+- Bug Bite
+- Bullet Punch
+
+Sableye @ Roseli Berry
+Ability: Prankster
+Level: 40
+Impish Nature
+- Fake Out
+- Foul Play
+- Rain Dance
+- Disable
 
 === TRAINER_BRENDAN_RUSTBORO_TREECKO ===
 Name: BRENDAN

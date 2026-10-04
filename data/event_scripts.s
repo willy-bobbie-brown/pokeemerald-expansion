@@ -1746,3 +1746,9 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/FortreeCity_Gym_3F/scripts.inc"
 
 	.include "data/maps/FortreeCity_Gym_2F/scripts.inc"
+
+	.include "data/maps/Mossdeep_City_Gym_Elevator/scripts.inc"
+
+	.include "data/maps/Mossdeep_City_Gym_Corridor/scripts.inc"
+
+	.include "data/maps/Mossdeep_City_Gym_BattleRoom/scripts.inc"

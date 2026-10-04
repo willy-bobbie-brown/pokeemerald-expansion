@@ -1181,10 +1181,10 @@
     {
       "id": "LAYOUT_MOSSDEEP_CITY_GYM",
       "name": "MossdeepCity_Gym_Layout",
-      "width": 26,
-      "height": 36,
+      "width": 25,
+      "height": 14,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_MossdeepGym",
+      "secondary_tileset": "gTileset_BattleFrontier",
       "border_filepath": "data/layouts/MossdeepCity_Gym/border.bin",
       "blockdata_filepath": "data/layouts/MossdeepCity_Gym/map.bin",
       "layout_version": "emerald"
@@ -9367,6 +9367,36 @@
       "border_filepath": "data/layouts/FortreeCity_Gym_2F/border.bin",
       "blockdata_filepath": "data/layouts/FortreeCity_Gym_2F/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_MOSSDEEP_CITY_GYM_ELEVATOR",
+      "name": "Mossdeep_City_Gym_Elevator_Layout",
+      "width": 5,
+      "height": 7,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFrontier",
+      "border_filepath": "data/layouts/Mossdeep_City_Gym_Elevator/border.bin",
+      "blockdata_filepath": "data/layouts/Mossdeep_City_Gym_Elevator/map.bin"
+    },
+    {
+      "id": "LAYOUT_MOSSDEEP_CITY_GYM_CORRIDOR",
+      "name": "Mossdeep_City_Gym_Corridor_Layout",
+      "width": 17,
+      "height": 5,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFrontier",
+      "border_filepath": "data/layouts/Mossdeep_City_Gym_Corridor/border.bin",
+      "blockdata_filepath": "data/layouts/Mossdeep_City_Gym_Corridor/map.bin"
+    },
+    {
+      "id": "LAYOUT_MOSSDEEP_CITY_GYM_BATTLE_ROOM",
+      "name": "Mossdeep_City_Gym_BattleRoom_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFrontier",
+      "border_filepath": "data/layouts/Mossdeep_City_Gym_BattleRoom/border.bin",
+      "blockdata_filepath": "data/layouts/Mossdeep_City_Gym_BattleRoom/map.bin"
     }
   ]
 }
