@@ -716,7 +716,7 @@ PetalburgCity_Gym_Movement_WallyExitNorth:
 	walk_down
 	walk_down
 	walk_down
-	walk_in_place_faster_up
+	walk_in_place_faster_left
 	delay_16
 	walk_in_place_down
 	step_end
@@ -724,35 +724,50 @@ PetalburgCity_Gym_Movement_WallyExitNorth:
 PetalburgCity_Gym_Movement_WallyExitEast:
 	walk_down
 	walk_down
-	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	walk_down
 	walk_in_place_faster_up
 	delay_16
 	walk_in_place_down
+	set_invisible
 	step_end
 
 PetalburgCity_Gym_Movement_WallyExitSouthWest:
 	walk_down
 	walk_down
 	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	walk_in_place_faster_up
 	delay_16
 	walk_in_place_down
+	set_invisible
 	step_end
 
 PetalburgCity_Gym_Movement_PlayerExitWithWallyNorth:
 	delay_16
 	delay_16
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	face_right
 	delay_16
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
+	face_down
 	delay_8
 	step_end
 
@@ -769,23 +784,35 @@ PetalburgCity_Gym_Movement_PlayerExitWithWallySouth:
 	step_end
 
 PetalburgCity_Gym_Movement_PlayerExitWithWallyWest:
+	walk_in_place_faster_down
+	walk_down
+	walk_down
+	walk_down
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	delay_16
-	delay_16
-	walk_down
-	walk_down
-	walk_down
 	walk_down
 	delay_8
 	step_end
 
 PetalburgCity_Gym_Movement_PlayerExitWithWallyEast:
 	walk_in_place_faster_down
-	delay_16
-	delay_16
 	walk_down
 	walk_down
 	walk_down
 	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	delay_16
 	walk_down
 	delay_8
 	step_end
