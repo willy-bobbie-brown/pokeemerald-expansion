@@ -1,5 +1,5 @@
 PetalburgCity_Gym_MapScripts::
-	map_script MAP_SCRIPT_ON_LOAD, PetalburgCity_Gym_OnLoad
+@	map_script MAP_SCRIPT_ON_LOAD, PetalburgCity_Gym_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, PetalburgCity_Gym_OnTransition
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, PetalburgCity_Gym_OnWarp
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, PetalburgCity_Gym_OnFrame
@@ -520,8 +520,11 @@ PetalburgCity_Gym_EventScript_ExitGymWithWallysDadWest::
 PetalburgCity_Gym_Movement_WallysDadExitNorth:
 	walk_down
 	walk_down
-	walk_left
-	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	walk_down
 	walk_down
 	walk_in_place_faster_up
@@ -533,8 +536,11 @@ PetalburgCity_Gym_Movement_WallysDadExitNorth:
 PetalburgCity_Gym_Movement_WallysDadExitEast:
 	walk_down
 	walk_down
-	walk_left
-	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	walk_down
 	walk_down
 	walk_in_place_faster_up
@@ -549,7 +555,11 @@ PetalburgCity_Gym_Movement_WallysDadExitWest:
 	walk_left
 	walk_left
 	walk_left
-	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	walk_down
 	walk_down
 	walk_in_place_faster_up
@@ -560,10 +570,14 @@ PetalburgCity_Gym_Movement_WallysDadExitWest:
 
 PetalburgCity_Gym_Movement_PlayerExitWithWallysDadNorth:
 	delay_16
+	walk_left
 	walk_down
 	walk_down
-	walk_left
-	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	walk_down
 	walk_down
 	step_end
@@ -572,7 +586,11 @@ PetalburgCity_Gym_Movement_PlayerExitWithWallysDadEast:
 	delay_16
 	walk_down
 	walk_down
-	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	walk_down
 	walk_down
 	walk_down
@@ -585,7 +603,11 @@ PetalburgCity_Gym_Movement_PlayerExitWithWallysDadWest:
 	walk_down
 	walk_left
 	walk_left
-	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	walk_down
 	walk_down
 	step_end
@@ -601,8 +623,12 @@ PetalburgCity_Gym_Movement_WallysDadEnterGym:
 	step_end
 
 PetalburgCity_Gym_Movement_WallysDadApproachPlayerNorth:
-	walk_right
-	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
 	walk_up
 	walk_up
 	walk_up
@@ -610,8 +636,12 @@ PetalburgCity_Gym_Movement_WallysDadApproachPlayerNorth:
 	step_end
 
 PetalburgCity_Gym_Movement_WallysDadApproachPlayerEast:
-	walk_right
-	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
 	walk_up
 	walk_up
 	walk_up
@@ -622,8 +652,12 @@ PetalburgCity_Gym_Movement_WallysDadApproachPlayerWest:
 	walk_right
 	walk_up
 	walk_up
-	walk_right
-	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
 	walk_up
 	step_end
 
