@@ -4815,8 +4815,8 @@ Level: 12
 Impish Nature
 - Toxic
 - Rest
-- Bug Bite
-- Power Trick
+- Infestation
+- Power Split
 
 Seviper @ Oran Berry
 Ability: Shed Skin
@@ -4837,14 +4837,14 @@ Items: Super Potion / Super Potion
 Double Battle: No
 AI: Smart Trainer / Prediction
 
-Makuhita
+Makuhita @ Life Orb
 Ability: Sheer Force
 Level: 16
 Adamant Nature
 - Force Palm
-- Fake Out
+- Rock Tomb
 - Knock Off
-- Bullet Punch
+- Bulldoze
 
 Heracross @ Coba Berry
 Ability: Moxie
@@ -4852,7 +4852,7 @@ Level: 18
 Jolly Nature
 - Rock Blast
 - Aerial Ace
-- Fury Cutter
+- Pounce
 - Counter
 
 Breloom @ Focus Sash
@@ -4872,29 +4872,29 @@ Gender: Male
 Music: Male
 Items: Super Potion / Super Potion
 Double Battle: No
-AI: Smart Trainer / Prediction
+AI: Smart Trainer / Prediction / Prefer Baton Pass / Force Setup First Turn
 
-Magneton
+Ninjask @ Focus Sash
+Ability: Speed Boost
+Level: 22
+Adamant Nature
+- Swords Dance
+- X-Scissor
+- Aerial Ace
+- Baton Pass
+
+Magneton @ Air Balloon
 Ability: Analytic
-Level: 20
+Level: 22
 Quiet Nature
 - Thunder Wave
 - Sonic Boom
 - Volt Switch
 - Gyro Ball
 
-Ninjask @ Focus Sash
-Ability: Speed Boost
-Level: 20
-Adamant Nature
-- Swords Dance
-- X-Scissor
-- Aerial Ace
-- U-Turn
-
 Scizor @ Occa Berry
 Ability: Technician
-Level: 22
+Level: 23
 Adamant Nature
 - Swords Dance
 - Bullet Punch
