@@ -15,6 +15,7 @@ LavaridgeTown_HerbShop_EventScript_Clerk::
 LavaridgeTown_HerbShop_Pokemart:
 	.2byte ITEM_ABILITY_CAPSULE
 	.2byte ITEM_ABILITY_PATCH
+	.2byte ITEM_FRIEND_CHARM
 	.2byte ITEM_ADAMANT_MINT
 	.2byte ITEM_MODEST_MINT
 	.2byte ITEM_JOLLY_MINT

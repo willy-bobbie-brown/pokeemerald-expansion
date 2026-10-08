@@ -3473,7 +3473,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, enum Item item, u8 partyIndex, 
     s8 friendshipChange = 0;
     enum HoldEffect holdEffect;
     enum BattlerId battler = MAX_BATTLERS_COUNT;
-    bool32 friendshipOnly = FALSE;
+    bool32 friendshipOnly = (item == ITEM_FRIEND_CHARM);
     enum Item heldItem;
     u8 effectFlags;
     s8 evChange;
@@ -3502,6 +3502,8 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, enum Item item, u8 partyIndex, 
 
     // Get item effect
     itemEffect = GetItemEffect(item);
+    if (item == ITEM_FRIEND_CHARM && GetMonData(mon, MON_DATA_FRIENDSHIP) >= MAX_FRIENDSHIP)
+        return TRUE;
     isLevelUpItem = (itemEffect[3] & ITEM3_LEVEL_UP) != 0;
     levelBefore = GetMonData(mon, MON_DATA_LEVEL, NULL);
 

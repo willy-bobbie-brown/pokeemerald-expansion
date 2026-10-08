@@ -15832,6 +15832,23 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
+    [ITEM_FRIEND_CHARM] =
+    {
+        .name = ITEM_NAME("Friend Charm"),
+        .price = 2000,
+        .description = COMPOUND_STRING(
+            "A special charm\n"
+            "that boosts\n"
+            "friendship."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_STAT_BOOST_DRINK,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .effect = gItemEffect_FriendCharm,
+        .flingPower = 30,
+        .iconPic = gItemIcon_OvalCharm,
+        .iconPalette = gItemIconPalette_OvalStone,
+    }
 };
 
 #undef ITEM_NAME

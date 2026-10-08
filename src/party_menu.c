@@ -4852,6 +4852,9 @@ static void GetMedicineItemEffectMessage(enum Item item, u32 statusCured)
     case ITEM_EFFECT_HEAL_PP:
         StringExpandPlaceholders(gStringVar4, gText_PPWasRestored);
         break;
+    case ITEM_EFFECT_RAISE_FRIENDSHIP:
+        StringExpandPlaceholders(gStringVar4, gText_FriendCharmEffect);
+        break;
     default:
         StringExpandPlaceholders(gStringVar4, gText_WontHaveEffect);
         break;
@@ -7006,6 +7009,10 @@ void TryItemHoldFormChange(struct Pokemon *mon, s8 slotId, enum BattleTrainer tr
 
 enum ItemEffectType GetItemEffectType(enum Item item)
 {
+    if (item == ITEM_FRIEND_CHARM) {
+        return ITEM_EFFECT_RAISE_FRIENDSHIP;
+    }
+
     u32 statusCure;
     const u8 *itemEffect = GetItemEffect(item);
 
