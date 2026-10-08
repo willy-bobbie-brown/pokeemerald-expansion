@@ -179,7 +179,14 @@ const u8 gItemEffect_SacredAsh[7] = {
     [(i) + 1] = 3, /* Friendship change, mid */  \
     [(i) + 2] = 2  /* Friendship change, high */
 
-const u8 gItemEffect_HPUp[11] = {
+const u8 gItemEffect_FriendCharm[11] = {
+    [5] = ITEM5_FRIENDSHIP_ALL,
+    [6] = 127,
+    [7] = 127,
+    [8] = 127,
+};
+
+    const u8 gItemEffect_HPUp[11] = {
     [4] = ITEM4_EV_HP,
     [5] = ITEM5_FRIENDSHIP_ALL,
     [6] = ITEM6_ADD_EV,
