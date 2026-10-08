@@ -6352,3 +6352,9 @@ BattleScript_SilphScopeUnveiled::
 	printstring STRINGID_GHOSTWASMAROWAK
 	waitmessage B_WAIT_TIME_LONG
 	end2
+
+BattleScript_FieldGasEnters::
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_NEUTRALIZINGGASENTERS
+	waitmessage B_WAIT_TIME_LONG
+	end3

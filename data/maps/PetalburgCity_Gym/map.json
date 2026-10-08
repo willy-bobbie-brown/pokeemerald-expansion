@@ -5,7 +5,7 @@
   "music": "MUS_B_PALACE",
   "region_map_section": "MAPSEC_PETALBURG_CITY",
   "requires_flash": false,
-  "weather": "WEATHER_NONE",
+  "weather": "WEATHER_FOG_DIAGONAL",
   "map_type": "MAP_TYPE_INDOOR",
   "allow_cycling": false,
   "allow_escaping": false,

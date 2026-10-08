@@ -2801,7 +2801,7 @@ bool32 TryFieldEffects(enum FieldEffectCases caseId)
             effect = TRUE;
         }
         else if (B_OVERWORLD_FOG >= GEN_8
-              && (GetCurrentWeather() == WEATHER_FOG_HORIZONTAL || GetCurrentWeather() == WEATHER_FOG_DIAGONAL)
+              && (GetCurrentWeather() == WEATHER_FOG_HORIZONTAL)
               && !(gFieldStatuses & STATUS_FIELD_MISTY_TERRAIN))
         {
             gFieldStatuses = STATUS_FIELD_MISTY_TERRAIN;
@@ -4853,6 +4853,8 @@ bool32 TryPrimalReversion(enum BattlerId battler)
 
 bool32 IsNeutralizingGasOnField(void)
 {
+    if (GetCurrentWeather() == WEATHER_FOG_DIAGONAL)
+        return TRUE;
     for (enum BattlerId i = 0; i < gBattlersCount; i++)
     {
         if (gBattleMons[i].volatiles.neutralizingGas && !gBattleMons[i].volatiles.gastroAcid)

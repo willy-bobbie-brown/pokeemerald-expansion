@@ -3721,6 +3721,13 @@ static void TryDoEventsBeforeFirstTurn(void)
     if (gBattleControllerExecFlags)
         return;
 
+    if (GetCurrentWeather() == WEATHER_FOG_DIAGONAL && !gBattleStruct->fieldGasAnnounced)
+    {
+        gBattleStruct->fieldGasAnnounced = TRUE;
+        BattleScriptExecute(BattleScript_FieldGasEnters);
+        return;
+    }
+
     switch (gBattleStruct->eventState.beforeFirstTurn)
     {
     case FIRST_TURN_EVENTS_START:

@@ -743,6 +743,7 @@ struct BattleStruct
     u8 intimidateActivated:1;
     u8 allowPartingShot:1;
     u8 adrenalineOrbActivated:1; // prevents looping after an adrenaline stat changed
+    bool8 fieldGasAnnounced;
 };
 
 struct AiBattleData

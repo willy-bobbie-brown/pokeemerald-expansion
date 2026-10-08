@@ -4964,7 +4964,7 @@ Gender: Male
 Music: Male
 Items: Hyper Potion / Hyper Potion
 Double Battle: No
-AI: Smart Trainer / Prediction
+AI: Smart Trainer / Prediction / Stall
 
 Venusaur @ Focus Sash
 Ability: Chlorophyll
@@ -4981,17 +4981,17 @@ Level: 30
 Calm Nature
 - Toxic
 - Healing Wish
-- Dazzling Gleam
-- Reflect
+- Seismic Toss
+- Protect
 
-Suicune @ Chesto Berry
+Suicune @ Leftovers
 Ability: Inner Focus
 Level: 29
 Bold Nature
 - Scald
 - Calm Mind
 - Ice Beam
-- Rest
+- Protect
 
 Slaking @ Sitrus Berry
 Ability: Truant
