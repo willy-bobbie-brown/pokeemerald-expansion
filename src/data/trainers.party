@@ -4984,14 +4984,14 @@ Calm Nature
 - Seismic Toss
 - Protect
 
-Suicune @ Leftovers
+Suicune @ Chesto Berry
 Ability: Inner Focus
 Level: 29
 Bold Nature
 - Scald
 - Calm Mind
 - Ice Beam
-- Protect
+- Rest
 
 Slaking @ Sitrus Berry
 Ability: Truant
@@ -5010,7 +5010,34 @@ Gender: Male
 Music: Male
 Items: Hyper Potion / Hyper Potion
 Double Battle: No
-AI: Smart Trainer / Prediction
+AI: Smart Trainer / Prediction / Powerful Status / Stall
+
+Regirock @ Assault Vest
+Ability: Sturdy
+Level: 33
+Careful Nature
+- Earthquake
+- Body Press
+- Rock Slide
+- Thunder Punch
+
+Regice @ Rocky Helmet
+Ability: Clear Body
+Level: 33
+Bold Nature
+- Ice Beam
+- Thunderbolt
+- Ancient Power
+- Thunder Wave
+
+Registeel @ Leftovers
+Ability: Clear Body
+Level: 33
+Careful Nature
+- Iron Defense
+- Body Press
+- Protect
+- Toxic
 
 Articuno @ Bright Powder
 Ability: Snow Cloak
@@ -16970,9 +16997,9 @@ Gender: Male
 Music: Male
 Items: Hyper Potion / Hyper Potion
 Double Battle: No
-AI: Smart Trainer / Prediction
+AI: Smart Trainer / Prediction / Will Suicide
 
-Regirock @ Quick Claw
+Regirock @ Normal Gem
 Ability: Sturdy
 Level: 33
 Adamant Nature
@@ -16981,20 +17008,20 @@ Adamant Nature
 - Rock Slide
 - Thunder Wave
 
-Regice @ Chesto Berry
+Regice @ Normal Gem
 Ability: Clear Body
 Level: 33
 Bold Nature
-- Ice Beam
-- Lock-On
+- Blizzard
+- Explosion
 - Zap Cannon
-- Rest
+- Focus Blast
 
-Registeel @ Leftovers
+Registeel @ Normal Gem
 Ability: Clear Body
 Level: 33
 Careful Nature
 - Iron Defense
 - Body Press
 - Heavy Slam
-- Toxic
+- Explosion
