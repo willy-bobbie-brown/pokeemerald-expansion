@@ -2953,14 +2953,8 @@ static bool8 PartyMenu_CanUseUntaughtHmFieldMove(enum Species species, u8 fieldM
 
     switch (fieldMove)
     {
-    case FIELD_MOVE_CUT:        item = ITEM_HM01; break;
     case FIELD_MOVE_FLASH:      item = ITEM_HM05; break;
-    case FIELD_MOVE_ROCK_SMASH: item = ITEM_HM06; break;
-    case FIELD_MOVE_STRENGTH:   item = ITEM_HM04; break;
-    case FIELD_MOVE_SURF:       item = ITEM_HM03; break;
     case FIELD_MOVE_FLY:        item = ITEM_HM02; break;
-    case FIELD_MOVE_DIVE:       item = ITEM_HM08; break;
-    case FIELD_MOVE_WATERFALL:  item = ITEM_HM07; break;
     default:                    return FALSE;
     }
 
@@ -2992,9 +2986,11 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
         }
     }
 
-    // Also offer field moves the player owns the HM for, even if this mon hasn't learned them
+    // Also offer Flash and Fly if the player owns the HM, even if this mon hasn't learned it
     for (j = 0; j != FIELD_MOVES_COUNT; j++)
     {
+        if (sPartyMenuInternal->numActions >= ARRAY_COUNT(sPartyMenuInternal->actions) - 3)
+            break;
         if (!alreadyAdded[j] && PartyMenu_CanUseUntaughtHmFieldMove(GetMonData(&mons[slotId], MON_DATA_SPECIES), j))
             AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, j + MENU_FIELD_MOVES);
     }
