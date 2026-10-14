@@ -5143,16 +5143,16 @@ AI: Smart Trainer / Prediction
 
 Starmie @ Choice Specs
 Ability: Analytic
-Level: 43
+Level: 46
 Timid Nature
 - Thunderbolt
 - Surf
-- Power Gem
+- Psychic
 - Ice Beam
 
 Metagross @ Choice Band
 Ability: Clear Body
-Level: 43
+Level: 46
 Jolly Nature
 - Iron Head
 - Hammer Arm
@@ -5161,7 +5161,7 @@ Jolly Nature
 
 Swampert @ Assault Vest
 Ability: Torrent
-Level: 44
+Level: 46
 Adamant Nature
 - Earthquake
 - Liquidation
@@ -5170,7 +5170,7 @@ Adamant Nature
 
 Latios @ Life Orb
 Ability: Levitate
-Level: 44
+Level: 46
 Modest Nature
 - Luster Purge
 - Recover
@@ -5179,7 +5179,7 @@ Modest Nature
 
 Salamence @ Lum Berry
 Ability: Intimidate
-Level: 45
+Level: 46
 Jolly Nature
 - Dragon Dance
 - Dragon Claw
@@ -10936,7 +10936,7 @@ Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: Yes
-AI: Smart Trainer / Prediction / Powerful Status / Double Ace Pokemon
+AI: Smart Trainer / Prediction / Double Ace Pokemon
 
 Scizor @ Sitrus Berry
 Ability: Technician
