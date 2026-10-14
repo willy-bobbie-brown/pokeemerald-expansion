@@ -21,7 +21,9 @@ Mossdeep_City_Gym_BattleRoom_OnFrame::
 	map_script_2 VAR_TEMP_0, 1, Mossdeep_City_Gym_BattleRoom_EventScript_FightTrainer1
 	map_script_2 VAR_TEMP_0, 2, Mossdeep_City_Gym_BattleRoom_EventScript_FightTrainer2
 	map_script_2 VAR_TEMP_0, 3, Mossdeep_City_Gym_BattleRoom_EventScript_FightTrainer3
-	map_script_2 VAR_TEMP_0, 4, Mossdeep_City_Gym_BattleRoom_EventScript_FightAnabel
+	map_script_2 VAR_TEMP_0, 4, Mossdeep_City_Gym_BattleRoom_EventScript_HealTeam
+	map_script_2 VAR_TEMP_0, 5, Mossdeep_City_Gym_BattleRoom_EventScript_FightAnabel
+	map_script_2 VAR_TEMP_0, 6, Mossdeep_City_Gym_BattleRoom_EventScript_AnabelAfterBattle
 	.2byte 0
 
 @ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -78,13 +80,42 @@ Mossdeep_City_Gym_BattleRoom_EventScript_FightTrainer3::
 	delay 48
 	setvar VAR_TEMP_0, 4
 
+Mossdeep_City_Gym_BattleRoom_EventScript_HealTeam::
+	applymovement LOCALID_MOSSDEEP_RECEPTIONIST_BATTLEROOM, Mossdeep_City_BattleRoom_Movement_ReceptionistWalkUpToHeal
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Mossdeep_City_BattleRoom_Movement_FacePlayerDown
+	msgbox MossdeepCity_Gym_Text_Receptionist_Heal, MSGBOX_DEFAULT
+	closemessage
+	special HealPlayerParty
+	playfanfare MUS_HEAL
+	waitfanfare
+	applymovement LOCALID_PLAYER, Mossdeep_City_BattleRoom_Movement_FacePlayerRight
+	applymovement LOCALID_MOSSDEEP_RECEPTIONIST_BATTLEROOM, Mossdeep_City_BattleRoom_Movement_ReceptionistWalkBackFromHeal
+	waitmovement 0
+	setvar VAR_TEMP_0, 5
+
 Mossdeep_City_Gym_BattleRoom_EventScript_FightAnabel::
 	clearflag FLAG_HIDE_ANABEL
 	addobject LOCALID_ANABEL, MAP_MOSSDEEP_CITY_GYM_BATTLE_ROOM
 	applymovement LOCALID_ANABEL, Mossdeep_City_Gym_BattleRoom_Movement_TrainerWalkIntoBattleRoom
 	waitmovement 0
-	goto MossdeepCity_Gym_EventScript_TateAndLiza
+	call MossdeepCity_Gym_EventScript_TateAndLiza
+	setvar VAR_TEMP_0, 6
 
+Mossdeep_City_Gym_BattleRoom_EventScript_AnabelAfterBattle::
+	setvar VAR_TEMP_0, 7
+	call MossdeepCity_Gym_EventScript_TateAndLizaDefeated
+	applymovement LOCALID_ANABEL, Mossdeep_City_Gym_BattleRoom_Movement_TrainerWalkOutOfBattleRoom
+	waitmovement 0
+	setflag FLAG_HIDE_ANABEL
+	playse SE_EXIT
+	removeobject LOCALID_ANABEL
+	waitse
+	delay 48
+	release
+	warp MAP_MOSSDEEP_CITY_GYM, 12, 9
+	waitstate
+	end
 
 MossdeepCity_Gym_BattleRoom_EventScript_Clifford::
 	trainerbattle_no_intro TRAINER_TERRY, MossdeepCity_Gym_Text_CliffordDefeat
@@ -99,6 +130,14 @@ MossdeepCity_Gym_BattleRoom_EventScript_Macey::
 	return
 
 @ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Mossdeep_City_BattleRoom_Movement_FacePlayerDown:
+	face_down
+	step_end
+
+Mossdeep_City_BattleRoom_Movement_FacePlayerRight:
+	face_right
+	step_end
 
 Mossdeep_City_Gym_BattleRoom_Movement_ReceptionistTurns:
 	face_up
@@ -130,14 +169,29 @@ Mossdeep_City_Gym_BattleRoom_Movement_TrainerWalkOutOfBattleRoom:
 	set_invisible
 	step_end
 
+Mossdeep_City_BattleRoom_Movement_ReceptionistWalkUpToHeal:
+	walk_up
+	walk_up
+	step_end
+
+Mossdeep_City_BattleRoom_Movement_ReceptionistWalkBackFromHeal:
+	walk_down
+	walk_down
+	face_up
+	step_end
+
 @ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 MossdeepCity_Gym_Text_CliffordDefeat:
-	.string "Please help us.$"
+	.string "PLEASE HELP US$"
 
 
 MossdeepCity_Gym_Text_NicholasDefeat:
-	.string "I WANNA GO HOME!$"
+	.string "I WANNA GO HOME$"
 
 
 MossdeepCity_Gym_Text_MaceyDefeat:
-	.string "I don't wanna be here anymore.$"
+	.string "I DON'T WANNA BE HERE ANYMORE$"
+
+MossdeepCity_Gym_Text_Receptionist_Heal:
+	.string "One moment please while\n"
+	.string "I heal your POKéMON.$"

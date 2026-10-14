@@ -13,12 +13,18 @@ MossdeepCity_Gym_OnTransition:
 
 MossdeepCity_Gym_EventScript_Receptionist::
 	lock
+	goto_if_set FLAG_DEFEATED_MOSSDEEP_GYM, MossdeepCity_Gym_EventScript_GymAlreadyCleared
 	msgbox MossdeepCiy_Gym_Text_Receptionist_Welcome, MSGBOX_DEFAULT
 	msgbox MossdeepCiy_Gym_Text_Receptionist_Entry, MSGBOX_YESNO
 	closemessage
 	compare VAR_RESULT, 1
 	goto_if_eq MossdeepCity_Gym_EventScript_LeadToElevator
 	msgbox MossdeepCity_Gym_Text_Receptionist_Goodbye, MSGBOX_DEFAULT
+	release
+	end
+
+MossdeepCity_Gym_EventScript_GymAlreadyCleared::
+	msgbox MossdeepCity_Gym_Text_AlreadyBeatGym, MSGBOX_DEFAULT
 	release
 	end
 
@@ -38,13 +44,9 @@ MossdeepCity_Gym_EventScript_LeadToElevator::
     end
 
 MossdeepCity_Gym_EventScript_TateAndLiza::
-	trainerbattle_double TRAINER_TATE_AND_LIZA_1, MossdeepCity_Gym_Text_TateAndLizaIntro, MossdeepCity_Gym_Text_TateAndLizaDefeat, MossdeepCity_Gym_Text_TateAndLizaNeedTwoMons, MossdeepCity_Gym_EventScript_TateAndLizaDefeated, NO_MUSIC
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, MossdeepCity_Gym_EventScript_TateAndLizaRematch
-	goto_if_unset FLAG_RECEIVED_TM_CALM_MIND, MossdeepCity_Gym_EventScript_GiveCalmMind2
-	msgbox MossdeepCity_Gym_Text_TateAndLizaPostBattle, MSGBOX_DEFAULT
-	release
-	end
+	msgbox MossdeepCity_Gym_Text_TateAndLizaIntro, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_TATE_AND_LIZA_1, MossdeepCity_Gym_Text_TateAndLizaDefeat
+	return
 
 MossdeepCity_Gym_EventScript_TateAndLizaDefeated::
 	message MossdeepCity_Gym_Text_ReceivedMindBadge
@@ -75,8 +77,7 @@ MossdeepCity_Gym_EventScript_TateAndLizaDefeated::
 	closemessage
 	delay 30
 	setflag FLAG_ENABLE_TATE_AND_LIZA_MATCH_CALL
-	release
-	end
+	return
 
 MossdeepCity_Gym_EventScript_GiveCalmMind2::
 	giveitem ITEM_TM_CALM_MIND
@@ -131,6 +132,11 @@ MossdeepCity_Gym_Movement_WalkThroughDoor:
 @ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 @ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+MossdeepCity_Gym_Text_AlreadyBeatGym:
+	.string "Congratulations on your triumphant\n"
+	.string "victory over SALON MAIDEN ANABEL.\p"
+	.string "We hope to see you again soon!$"
 
 MossdeepCiy_Gym_Text_Receptionist_Welcome:
 	.string "Hello!\n"
