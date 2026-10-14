@@ -279,6 +279,7 @@ static const u16 sVulpixEggMoveLearnset[] = {
     MOVE_DISABLE,
     MOVE_HOWL,
     MOVE_HEAT_WAVE,
+    MOVE_SOLAR_BEAM,
     MOVE_FLARE_BLITZ,
     MOVE_EXTRASENSORY,
     MOVE_POWER_SWAP,
@@ -1706,6 +1707,7 @@ static const u16 sAzurillEggMoveLearnset[] = {
     MOVE_MUDDY_WATER,
     MOVE_COPYCAT,
     MOVE_CAMOUFLAGE,
+    MOVE_BELLY_DRUM,
     MOVE_UNAVAILABLE,
 };
 #endif //P_GEN_3_CROSS_EVOS
@@ -2980,6 +2982,7 @@ static const u16 sTorkoalEggMoveLearnset[] = {
     MOVE_SLEEP_TALK,
     MOVE_YAWN,
     MOVE_FISSURE,
+    MOVE_SOLAR_BEAM,
     MOVE_SKULL_BASH,
     MOVE_FLAME_BURST,
     MOVE_CLEAR_SMOG,
