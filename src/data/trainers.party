@@ -5150,16 +5150,16 @@ Timid Nature
 - Psychic
 - Ice Beam
 
-Metagross @ Choice Band
+Metagross @ Choice Scarf
 Ability: Clear Body
 Level: 46
-Jolly Nature
+Adamant Nature
 - Iron Head
 - Hammer Arm
 - Zen Headbutt
 - Earthquake
 
-Swampert @ Assault Vest
+Swampert @ Rindo Berry
 Ability: Torrent
 Level: 46
 Adamant Nature
@@ -5177,23 +5177,23 @@ Modest Nature
 - Aura Sphere
 - Dragon Pulse
 
-Salamence @ Lum Berry
+Salamence @ Choice Band
 Ability: Intimidate
 Level: 46
 Jolly Nature
-- Dragon Dance
+- Crunch
 - Dragon Claw
 - Dual Wingbeat
 - Iron Head
 
-Suicune @ Leftovers
+Suicune @ Assault Vest
 Ability: Inner Focus
 Level: 46
 Bold Nature
-- Calm Mind
+- Extrasensory
 - Surf
 - Ice Beam
-- Substitute
+- Sheer Cold
 
 === TRAINER_JERRY_1 ===
 Name: JERRY
