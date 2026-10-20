@@ -1708,6 +1708,7 @@ static const u16 sAzurillEggMoveLearnset[] = {
     MOVE_COPYCAT,
     MOVE_CAMOUFLAGE,
     MOVE_BELLY_DRUM,
+    MOVE_AQUA_JET,
     MOVE_UNAVAILABLE,
 };
 #endif //P_GEN_3_CROSS_EVOS
@@ -3344,6 +3345,7 @@ static const u16 sAbsolEggMoveLearnset[] = {
     MOVE_HEX,
     MOVE_PERISH_SONG,
     MOVE_PLAY_ROUGH,
+    MOVE_CLOSE_COMBAT,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_ABSOL
